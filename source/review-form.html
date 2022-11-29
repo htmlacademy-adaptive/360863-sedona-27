@@ -35,17 +35,17 @@
   <form class="review__form form" action="https://echo.htmlacademy.ru/" method="post">
     <fieldset class="form__fieldset">
       <legend class="form__legend">Представьтесь</legend>
-      <div class="form__item put-name">
-        <label class="put-name__label" for="name">Имя*:</label>
-        <input class="put-name__input" type="text" name="name" id="name" placeholder="Ваше имя" value="Пётр" required>
+      <div class="form__item put-personal-data">
+        <label class="put-personal-data__label" for="name">Имя*:</label>
+        <input class="put-personal-data__input" type="text" name="name" id="name" placeholder="Ваше имя" value="Пётр" required>
       </div>
-      <div class="form__item put-surname">
-        <label class="put-surname__label" for="surname">Фамилия*:</label>
-        <input class="put-surname__input" type="text" name="surname" id="surname" placeholder="Ваша фамилия" value="Пустота" required>
+      <div class="form__item put-personal-data">
+        <label class="put-personal-data__label" for="surname">Фамилия*:</label>
+        <input class="put-personal-data__input" type="text" name="surname" id="surname" placeholder="Ваша фамилия" value="Пустота" required>
       </div>
-      <div class="form__item put-patronymic">
-        <label class="put-patronymic__label" for="patronymic">Отчество*:</label>
-        <input class="put-patronymic__input" type="text" name="patronymic" id="patronymic" placeholder="Ваше отчество" value="Викторович" required>
+      <div class="form__item put-personal-data">
+        <label class="put-personal-data__label" for="patronymic">Отчество*:</label>
+        <input class="put-personal-data__input" type="text" name="patronymic" id="patronymic" placeholder="Ваше отчество" value="Викторович" required>
       </div>
     </fieldset>
     <fieldset class="form__fieldset">
@@ -120,9 +120,9 @@
     </fieldset>
     <fieldset class="form__fieldset">
       <legend class="form__legend">Опишите свои эмоции:</legend>
-      <div class="form__text-area message">
+      <div class="form__text-area-wrapper">
         <label class="visually-hidden" for="message">Ваше сообщение</label>
-        <textarea class="message__text" name="message" id="message" cols="10" rows="5"></textarea>
+        <textarea class="form__textarea" name="message" id="message" cols="10" rows="5"></textarea>
       </div>
     </fieldset>
     <button class="form-button button-primary" type="submit">Отправить отзыв</button>
