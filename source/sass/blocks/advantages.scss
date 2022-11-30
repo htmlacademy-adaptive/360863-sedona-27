@@ -1,0 +1,28 @@
+.advantages {
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.advantages__title {
+
+}
+
+.advantages__description {
+
+}
+
+.advantages__list {
+  position: relative;
+}
+
+.advantages__list::before {
+  position: absolute;
+  content: "";
+  top: -37px;
+  width: 320px;
+  height: 37px;
+  background-image: url("../img/advantages-list-border-top.svg");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-color: #81B3D2;
+}
