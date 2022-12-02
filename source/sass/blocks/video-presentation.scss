@@ -1,16 +1,26 @@
+@use "../fonts.scss";
+@use "../variables.scss";
+
 .video-presentation {
-  max-width: 320px;
-  margin: 0 auto;
+  @include variables.mobile-view-centered();
+  padding: 17px 20px 0 20px;
+  box-sizing: border-box;
 }
 
 .video-presentation__title {
-
+  @include fonts.heading-font();
+  color: fonts.$color-dark;
+  margin: 0;
 }
 
 .video-presentation__description {
-
+  @include fonts.basic-font();
+  color: fonts.$color-basic;
+  margin: 27px 0 0 0;
+  padding-left: 8px;
+  padding-right: 6px;
 }
 
 .video-presentation__video {
-
+  margin-top: 38px;
 }

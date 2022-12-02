@@ -1,3 +1,6 @@
-.first-title {
+@use "../fonts.scss";
 
+.first-title {
+  @include fonts.heading-font();
+  color: fonts.$color-dark;
 }

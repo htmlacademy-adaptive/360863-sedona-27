@@ -1,8 +1,21 @@
+@use "../fonts.scss";
+@use "../variables.scss";
+
 .photo-gallery {
-  max-width: 320px;
-  margin: 0 auto;
+  @include variables.mobile-view-centered();
+}
+
+.photo-gallery__description {
+  @include fonts.basic-font();
+  color: fonts.$color-basic;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin: 26px 0 0 0;
 }
 
 .photo-gallery__list {
-
+  box-sizing: border-box;
+  padding: 0;
+  margin-top: 36px;
+  margin-bottom: 0;
 }

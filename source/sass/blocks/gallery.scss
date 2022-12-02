@@ -1,25 +1,40 @@
+@use  "../fonts.scss";
+
 .gallery {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
 }
 
 .gallery__item {
+  padding: 24px 20px 25px 20px;
+  border-bottom: 1px solid #E5E5E5;
+  display: grid;
 
+  &:first-child {
+    border-top: 1px solid #E5E5E5;
+  }
 }
 
 .gallery__title {
-
+  @include fonts.basic-font();
+  font-weight: 700;
+  text-align: left;
+  margin: 15px 0 0 0;
+  color: fonts.$color-dark;
 }
 
 .gallery__photo {
   vertical-align: bottom;
+  order: -1;
 }
 
 .gallery__photo-author {
-
+  @include fonts.basic-font();
+  text-align: left;
+  color: fonts.$color-basic;
+  margin: 0;
+  text-transform: none;
 }
 
 .gallery__rating {
-
+  margin-top: 17px;
 }

@@ -1,8 +1,10 @@
+@use "../variables.scss";
+
 .main-container {
 
 }
 
 .main-container__first-title {
-  max-width: 320px;
-  margin: 0 auto;
+  @include variables.mobile-view-centered();
+  margin-top: 37px;
 }

@@ -1,11 +1,14 @@
 .put-rating {
-
+  display: inline-flex;
 }
 
 .put-rating__button {
-
+  width: 23px;
+  height: 21px;
+  background-color: inherit;
+  border: none;
 }
 
 .put-rating__counter {
-
+ margin-left: 14px;
 }
