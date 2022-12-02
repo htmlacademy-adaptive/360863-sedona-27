@@ -10,4 +10,3 @@
       hamburgerThirdLine.classList.toggle('main-nav__toggle-line--light');
     });
   }
-
