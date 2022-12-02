@@ -1,3 +1,10 @@
-.button-primary {
+@use "../fonts.scss";
 
+.button-primary {
+  @include fonts.heading-big-font();
+  display: block;
+  padding: 16px;
+  background-color: #81B3D2;
+  color: fonts.$color-light;
+  text-decoration: none;
 }

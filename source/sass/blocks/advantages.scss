@@ -1,14 +1,22 @@
+@use "../variables.scss";
+@use "../fonts.scss";
+
 .advantages {
-  max-width: 320px;
-  margin: 0 auto;
+  @include variables.mobile-view-centered();
+  padding-top: 34px;
 }
 
 .advantages__title {
-
+  @include fonts.heading-font();
+  margin: 0;
+  padding: 0 18px 0 18px;
+  box-sizing: border-box;
 }
 
 .advantages__description {
-
+  @include fonts.basic-font();
+  margin: 35px 0 0 0;
+  padding: 0 18px 0 18px;
 }
 
 .advantages__list {
@@ -18,11 +26,12 @@
 .advantages__list::before {
   position: absolute;
   content: "";
-  top: -37px;
+  top: 0;
   width: 320px;
   height: 37px;
   background-image: url("../img/advantages-list-border-top.svg");
   background-position: center top;
   background-repeat: no-repeat;
-  background-color: #81B3D2;
 }
+
+/*TODO: подчеркивает пути к изображениям, понятно что из этой папки путь один а из файла css другой, но все равно как то не понятно*/

@@ -1,16 +1,22 @@
+@use "../variables.scss";
+@use "../fonts.scss";
+
 .hotel-request {
-  max-width: 320px;
-  margin: 0 auto;
+  @include variables.mobile-view-centered();
+  padding: 38px 18px 48px 18px;
+  box-sizing: border-box;
 }
 
 .hotel-request__heading {
-
+  @include fonts.heading-big-font();
+  margin: 0;
 }
 
 .hotel-request__description {
-
+  @include fonts.basic-font();
+  margin: 21px 0 0 0;
 }
 
 .hotel-request__link {
-
+  margin-top: 32px;
 }

@@ -1,16 +1,23 @@
+@use "../variables.scss";
+@use "../fonts.scss";
+
 .footer {
-  max-width: 320px;
-  margin: 0 auto;
+  @include variables.mobile-view-centered();
+  display: grid;
+  justify-content: center;
+  padding: 39px 18px 23px 18px;
 }
 
 .footer__hashtag {
-
+  @include fonts.heading-big-font();
+  color: fonts.$color-dark;
+  margin: 0;
 }
 
 .footer__social {
-
+  margin: 34px 0 0 0;
 }
 
 .footer__copyright {
-
+  margin-top: 40px;
 }

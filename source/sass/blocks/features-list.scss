@@ -1,15 +1,24 @@
+@use "../fonts.scss";
+
 .features-list {
   background-color: #FFFFFF;
+  list-style-type: none;
 }
 
 .features-list__item {
-
+  padding-left: 47px;
 }
 
 .features-list__item-title {
-
+  @include fonts.heading-font();
+  margin: 8px 0 0 0;
+  color: fonts.$color-dark;
+  text-align: left;
 }
 
 .features-list__item-description {
-
+  @include fonts.basic-font();
+  margin: 16px 0 0 0;
+  color: fonts.$color-basic;
+  text-align: left;
 }

@@ -1,7 +1,14 @@
-.copyright {
+@use  "../fonts.scss";
 
+.copyright {
+  @include fonts.basic-font();
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: fonts.$color-dark;
+  text-decoration: none;
 }
 
 .copyright__icon {
-
+  margin-left: 12px;
 }

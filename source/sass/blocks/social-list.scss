@@ -1,15 +1,23 @@
 .social-list {
-
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
 }
 
 .social-list__icon {
-
+  fill: #FFFFFF;
 }
 
-.social-list__item {
-
+.social-list__item + .social-list__item {
+  margin-left: 6px;
 }
 
 .social-list__link {
-
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  background-color: #81B3D2;
 }
