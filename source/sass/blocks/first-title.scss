@@ -1,6 +1,7 @@
-@use "../fonts.scss";
+@use "../variables.scss";
+@use "../mixins.scss";
 
 .first-title {
-  @include fonts.heading-font();
-  color: fonts.$color-dark;
+  @include mixins.heading-font();
+  color: variables.$color-dark;
 }

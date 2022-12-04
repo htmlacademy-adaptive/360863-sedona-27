@@ -13,37 +13,3 @@
   font-style: normal;
   font-display: swap;
 }
-
-$color-light: #FFFFFF;
-$color-dark: #000000;
-$color-basic: #333333;
-$family-basic: "PT Sans", sans-serif;
-$weight-basic: 400;
-$weight-bold: 700;
-
-@mixin basic-font {
-  font-family: $family-basic;
-  font-weight: $weight-basic;
-  font-size: 14px;
-  line-height: 21px;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-@mixin heading-font {
-  font-family: $family-basic;
-  font-weight: $weight-bold;
-  font-size: 18px;
-  line-height: 26px;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-@mixin heading-big-font {
-  font-family: $family-basic;
-  font-weight: $weight-bold;
-  font-size: 21px;
-  line-height: 26px;
-  text-align: center;
-  text-transform: uppercase;
-}

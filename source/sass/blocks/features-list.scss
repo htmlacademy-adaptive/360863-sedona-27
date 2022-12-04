@@ -1,4 +1,5 @@
-@use "../fonts.scss";
+@use "../variables.scss";
+@use "../mixins.scss";
 
 .features-list {
   background-color: #FFFFFF;
@@ -10,15 +11,15 @@
 }
 
 .features-list__item-title {
-  @include fonts.heading-font();
+  @include mixins.heading-font();
   margin: 8px 0 0 0;
-  color: fonts.$color-dark;
+  color: variables.$color-dark;
   text-align: left;
 }
 
 .features-list__item-description {
-  @include fonts.basic-font();
+  @include mixins.basic-font();
   margin: 16px 0 0 0;
-  color: fonts.$color-basic;
+  color: variables.$color-basic;
   text-align: left;
 }

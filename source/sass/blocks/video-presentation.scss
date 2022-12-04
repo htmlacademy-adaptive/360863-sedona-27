@@ -1,21 +1,21 @@
-@use "../fonts.scss";
 @use "../variables.scss";
+@use "../mixins.scss";
 
 .video-presentation {
-  @include variables.mobile-view-centered();
+  @include mixins.mobile-view-centered();
   padding: 17px 20px 0 20px;
   box-sizing: border-box;
 }
 
 .video-presentation__title {
-  @include fonts.heading-font();
-  color: fonts.$color-dark;
+  @include mixins.heading-font();
+  color: variables.$color-dark;
   margin: 0;
 }
 
 .video-presentation__description {
-  @include fonts.basic-font();
-  color: fonts.$color-basic;
+  @include mixins.basic-font();
+  color: variables.$color-basic;
   margin: 27px 0 0 0;
   padding-left: 8px;
   padding-right: 6px;

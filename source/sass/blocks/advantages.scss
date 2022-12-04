@@ -1,20 +1,19 @@
-@use "../variables.scss";
-@use "../fonts.scss";
+@use "../mixins.scss";
 
 .advantages {
-  @include variables.mobile-view-centered();
+  @include mixins.mobile-view-centered();
   padding-top: 34px;
 }
 
 .advantages__title {
-  @include fonts.heading-font();
+  @include mixins.heading-font();
   margin: 0;
   padding: 0 18px 0 18px;
   box-sizing: border-box;
 }
 
 .advantages__description {
-  @include fonts.basic-font();
+  @include mixins.basic-font();
   margin: 35px 0 0 0;
   padding: 0 18px 0 18px;
 }

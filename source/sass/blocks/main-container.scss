@@ -1,10 +1,11 @@
 @use "../variables.scss";
+@use "../mixins.scss";
 
 .main-container {
 
 }
 
 .main-container__first-title {
-  @include variables.mobile-view-centered();
+  @include mixins.mobile-view-centered();
   margin-top: 37px;
 }

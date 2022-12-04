@@ -1,10 +1,12 @@
-@use "../fonts.scss";
+@use "../variables.scss";
+@use "../mixins.scss";
 
 .button-primary {
-  @include fonts.heading-big-font();
+  @include mixins.heading-big-font();
   display: block;
   padding: 16px;
   background-color: #81B3D2;
-  color: fonts.$color-light;
+  color: variables.$color-light;
   text-decoration: none;
+  border: none;
 }

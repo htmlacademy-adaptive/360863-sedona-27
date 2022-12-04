@@ -1,5 +1,5 @@
 @use "../variables.scss";
-@use "../fonts.scss";
+@use "../mixins.scss";
 
 .city-advantages {
   list-style-type: none;
@@ -9,7 +9,7 @@
 
 .city-advantages__item--with-image {
   background-color: #81B3D2;
-  color: fonts.$color-light;
+  color: variables.$color-light;
 
   .city-advantages__title {
     padding-top: 37px;
@@ -70,17 +70,17 @@
 }
 
 .city-advantages__title {
-  @include fonts.heading-font();
+  @include mixins.heading-font();
   margin: 0;
 }
 
 .city-advantages__number {
-  @include fonts.basic-font();
+  @include mixins.basic-font();
   margin: 0;
 }
 
 .city-advantages__description {
-  @include fonts.basic-font();
+  @include mixins.basic-font();
   margin: 0;
 }
 

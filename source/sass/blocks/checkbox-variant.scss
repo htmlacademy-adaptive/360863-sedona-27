@@ -1,15 +1,29 @@
+@use "../variables.scss";
+@use "../mixins.scss";
+
 .checkbox-variant {
-
-}
-
-.checkbox-variant__input {
-
+  position: relative;
+  display: block;
+  padding: 10px 10px 10px 62px;
 }
 
 .checkbox-variant__control {
+  position: absolute;
+  left: 0;
+  top: calc(50% - 23px);
+  width: 46px;
+  height: 46px;
+  background-color: #F2F2F2;
+}
 
+.checkbox-variant__input:checked + .checkbox-variant__control {
+  background-image: url("../img/icons/checkbox-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .checkbox-variant__label {
-
+  @include mixins.heading-font();
+  color: variables.$color-dark;
+  text-transform: none;
 }

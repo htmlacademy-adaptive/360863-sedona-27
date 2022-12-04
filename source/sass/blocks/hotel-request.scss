@@ -1,19 +1,19 @@
 @use "../variables.scss";
-@use "../fonts.scss";
+@use "../mixins.scss";
 
 .hotel-request {
-  @include variables.mobile-view-centered();
+  @include mixins.mobile-view-centered();
   padding: 38px 18px 48px 18px;
   box-sizing: border-box;
 }
 
 .hotel-request__heading {
-  @include fonts.heading-big-font();
+  @include mixins.heading-big-font();
   margin: 0;
 }
 
 .hotel-request__description {
-  @include fonts.basic-font();
+  @include mixins.basic-font();
   margin: 21px 0 0 0;
 }
 

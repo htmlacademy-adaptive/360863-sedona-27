@@ -1,25 +1,49 @@
-.form {
+@use "../variables.scss";
+@use "../mixins.scss";
 
+.form {
+  border-top: 1px solid #E5E5E5;
 }
 
 .form__fieldset {
+  position: relative;
+  margin: 0;
+  border: none;
+  padding: 20px 20px 24px 20px;
 
+  &:first-child {
+    padding-bottom: 39px;
+  }
+
+  &:nth-child(2) {
+    padding-bottom: 34px;
+  }
+
+  &:not(:last-of-type) {
+    border-bottom: 1px solid #E5E5E5;
+  }
 }
 
 .form__legend {
-
+  @include mixins.heading-font();
+  padding: 24px 0 0 0;
+  width: 100%;
+  color: variables.$color-dark;
 }
 
-.form__item {
-
+.form__item + .form__item {
+  margin-top: 16px;
 }
 
 .form__radio-list {
-
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
-.form__radio-item {
-
+.form__radio-item + .form__radio-item {
+  display: block;
+  margin-top: 16px;
 }
 
 .form__radio {
@@ -27,11 +51,14 @@
 }
 
 .form__checkbox-list {
-
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
-.form__checkbox-item {
-
+.form__checkbox-item +  .form__checkbox-item {
+  display: block;
+  margin-top: 16px;
 }
 
 .form__checkbox {
@@ -43,13 +70,34 @@
 }
 
 .form__textarea {
+  width: 100%;
+  min-height: 149px;
+  padding: 16px;
+  box-sizing: border-box;
+  resize: none;
+  border: none;
+  background-color: #F2F2F2;
+  @include mixins.heading-font();
+  color: variables.$color-dark;
+  text-transform: none;
+  text-align: left;
 
+  &::placeholder {
+    opacity: 0.3;
+  }
 }
 
-.form-button {
-
+.form__button {
+  width: 280px;
+  margin: 28px auto 0 auto;
 }
 
 .form__hint {
+  @include mixins.basic-font();
+  padding: 0 20px;
+  margin: 0;
+  text-align: right;
+  font-size: 12px;
+  color: rgba(51, 51, 51, 0.6);
 
 }

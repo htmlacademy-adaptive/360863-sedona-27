@@ -1,35 +1,25 @@
 @use "../variables.scss";
 @use "../mixins.scss";
 
-.put-personal-data {
+.put-phone {
 
 }
 
-.put-personal-data__label {
+.put-phone__label {
   @include mixins.basic-font();
   color: variables.$color-basic;
+  background-color: red;
   text-align: left;
   display: block;
   padding-left: 15px;
 }
 
-.put-personal-data__input {
+.put-phone__input {
   @include mixins.heading-font();
   color: variables.$color-dark;
   text-align: left;
   text-transform: unset;
   display: block;
-  width: 100%;
   padding: 16px 15px;
-  box-sizing: border-box;
   border: none;
-  background-color: #F2F2F2;
-
-  &::placeholder {
-    opacity: 0.3;
-  }
-}
-
-.put-personal-data__input--phone {
-  padding-right: 58px;
 }

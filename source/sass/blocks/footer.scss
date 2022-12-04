@@ -1,16 +1,16 @@
 @use "../variables.scss";
-@use "../fonts.scss";
+@use "../mixins.scss";
 
 .footer {
-  @include variables.mobile-view-centered();
+  @include mixins.mobile-view-centered();
   display: grid;
   justify-content: center;
   padding: 24px 18px 23px 18px;
 }
 
 .footer__hashtag {
-  @include fonts.heading-big-font();
-  color: fonts.$color-dark;
+  @include mixins.heading-big-font();
+  color: variables.$color-dark;
   margin: 0;
 }
 

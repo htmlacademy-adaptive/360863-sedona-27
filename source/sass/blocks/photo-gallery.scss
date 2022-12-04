@@ -1,13 +1,13 @@
-@use "../fonts.scss";
 @use "../variables.scss";
+@use "../mixins.scss";
 
 .photo-gallery {
-  @include variables.mobile-view-centered();
+  @include mixins.mobile-view-centered();
 }
 
 .photo-gallery__description {
-  @include fonts.basic-font();
-  color: fonts.$color-basic;
+  @include mixins.basic-font();
+  color: variables.$color-basic;
   padding-right: 20px;
   padding-left: 20px;
   margin: 26px 0 0 0;

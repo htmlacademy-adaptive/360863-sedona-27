@@ -1,11 +1,12 @@
-@use  "../fonts.scss";
+@use "../variables.scss";
+@use "../mixins.scss";
 
 .copyright {
-  @include fonts.basic-font();
+  @include mixins.basic-font();
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: fonts.$color-dark;
+  color: variables.$color-dark;
   text-decoration: none;
 }
 
