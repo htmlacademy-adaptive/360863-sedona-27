@@ -30,6 +30,6 @@
 
 .radio-variant__label {
   @include mixins.heading-font();
-  color: variables.$color-dark;
+  color: variables.$color-black;
   text-transform: none;
 }

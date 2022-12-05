@@ -1,3 +1,6 @@
+/*Шрифт*/
+@use "fonts.scss";
+
 /*Блоки*/
 @use  "blocks/page.scss";
 @use  "blocks/main-header.scss";
@@ -25,10 +28,6 @@
 @use  "blocks/radio-variant";
 @use  "blocks/checkbox-variant";
 @use  "blocks/pop-up";
-@use  "blocks/error";
-@use  "blocks/success";
-
-@use "fonts.scss";
 
 .visually-hidden {
   position: absolute;

@@ -20,7 +20,7 @@
   font-weight: 700;
   text-align: left;
   margin: 15px 0 0 0;
-  color: variables.$color-dark;
+  color: variables.$color-black;
 }
 
 .gallery__photo {
@@ -31,7 +31,7 @@
 .gallery__photo-author {
   @include mixins.basic-font();
   text-align: left;
-  color: variables.$color-basic;
+  color: variables.$color-mine-shaft;
   margin: 0;
   text-transform: none;
 }

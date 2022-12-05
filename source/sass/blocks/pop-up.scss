@@ -65,13 +65,13 @@
 
 .pop-up__title {
   @include mixins.heading-font();
-  color: variables.$color-dark;
+  color: variables.$color-black;
   margin: 0 0 0 0;
 }
 
 .pop-up__description {
   @include mixins.basic-font();
-  color: variables.$color-basic;
+  color: variables.$color-mine-shaft;
   margin: 21px 0 0 0;
 }
 

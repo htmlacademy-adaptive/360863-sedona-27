@@ -6,7 +6,7 @@
 }
 
 @mixin basic-font {
-  font-family: variables.$family-basic;
+  font-family: variables.$font-family-basic;
   font-weight: variables.$weight-basic;
   font-size: 14px;
   line-height: 21px;
@@ -15,7 +15,7 @@
 }
 
 @mixin heading-font {
-  font-family: variables.$family-basic;
+  font-family: variables.$font-family-basic;
   font-weight: variables.$weight-bold;
   font-size: 18px;
   line-height: 26px;
@@ -24,7 +24,7 @@
 }
 
 @mixin heading-big-font {
-  font-family: variables.$family-basic;
+  font-family: variables.$font-family-basic;
   font-weight: variables.$weight-bold;
   font-size: 21px;
   line-height: 26px;

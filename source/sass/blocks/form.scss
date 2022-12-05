@@ -28,7 +28,7 @@
   @include mixins.heading-font();
   padding: 24px 0 0 0;
   width: 100%;
-  color: variables.$color-dark;
+  color: variables.$color-black;
 }
 
 .form__item + .form__item {
@@ -78,7 +78,7 @@
   border: none;
   background-color: #F2F2F2;
   @include mixins.heading-font();
-  color: variables.$color-dark;
+  color: variables.$color-black;
   text-transform: none;
   text-align: left;
 
