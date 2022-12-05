@@ -1,3 +1,5 @@
+@use "../variables.scss";
+
 .main-nav {
   position: relative;
 }
@@ -36,13 +38,13 @@
   left: 0;
   width: 23px;
   height: 4px;
-  background-color: #81B3D2;
+  background-color: variables.$color-half-baked;
   -webkit-transition: 0.2s all linear;
   transition: 0.2s all linear;
 }
 
 .main-nav__toggle-line--light {
-  background-color: #FFFFFF;
+  background-color: variables.$color-white;
 }
 
 .main-nav__toggle-line-first {

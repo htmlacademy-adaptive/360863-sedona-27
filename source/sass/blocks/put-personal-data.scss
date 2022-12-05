@@ -1,13 +1,8 @@
 @use "../variables.scss";
 @use "../mixins.scss";
 
-.put-personal-data {
-
-}
-
 .put-personal-data__label {
   @include mixins.basic-font();
-  color: variables.$color-mine-shaft;
   text-align: left;
   display: block;
   padding-left: 15px;
@@ -15,7 +10,6 @@
 
 .put-personal-data__input {
   @include mixins.heading-font();
-  color: variables.$color-black;
   text-align: left;
   text-transform: unset;
   display: block;

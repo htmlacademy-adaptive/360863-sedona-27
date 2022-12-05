@@ -6,7 +6,7 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
-  background-color: #81B3D2;
+  background-color: variables.$color-half-baked;
 }
 
 .menu__item {
@@ -30,9 +30,9 @@
 }
 
 .menu__link {
+  @include mixins.heading-font();
   display: block;
   padding: 17px 20px 12px 20px;
   text-decoration: none;
   color: variables.$color-white;
-  @include mixins.heading-font();
 }

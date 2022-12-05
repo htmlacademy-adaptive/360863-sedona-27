@@ -2,7 +2,7 @@
 @use "../mixins.scss";
 
 .features-list {
-  background-color: #FFFFFF;
+  background-color: variables.$color-white;
   list-style-type: none;
 }
 
@@ -13,13 +13,11 @@
 .features-list__item-title {
   @include mixins.heading-font();
   margin: 8px 0 0 0;
-  color: variables.$color-black;
   text-align: left;
 }
 
 .features-list__item-description {
   @include mixins.basic-font();
   margin: 16px 0 0 0;
-  color: variables.$color-mine-shaft;
   text-align: left;
 }

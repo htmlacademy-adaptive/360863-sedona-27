@@ -2,7 +2,7 @@
 @use "../mixins.scss";
 
 .form {
-  border-top: 1px solid #E5E5E5;
+  border-top: 1px solid variables.$color-mercury;
 }
 
 .form__fieldset {
@@ -11,24 +11,23 @@
   border: none;
   padding: 20px 20px 24px 20px;
 
-  &:first-child {
-    padding-bottom: 39px;
+  &:not(.form__fieldset--message) {
+    border-bottom: 1px solid variables.$color-mercury;
   }
+}
 
-  &:nth-child(2) {
-    padding-bottom: 34px;
-  }
+.form__fieldset--name {
+  padding-bottom: 39px;
+}
 
-  &:not(:last-of-type) {
-    border-bottom: 1px solid #E5E5E5;
-  }
+.form__fieldset--contacts {
+  padding-bottom: 34px;
 }
 
 .form__legend {
   @include mixins.heading-font();
   padding: 24px 0 0 0;
   width: 100%;
-  color: variables.$color-black;
 }
 
 .form__item + .form__item {
@@ -46,10 +45,6 @@
   margin-top: 16px;
 }
 
-.form__radio {
-
-}
-
 .form__checkbox-list {
   list-style-type: none;
   padding: 0;
@@ -61,24 +56,15 @@
   margin-top: 16px;
 }
 
-.form__checkbox {
-
-}
-
-.form__text-area-wrapper {
-
-}
-
 .form__textarea {
+  @include mixins.heading-font();
   width: 100%;
   min-height: 149px;
   padding: 16px;
   box-sizing: border-box;
   resize: none;
   border: none;
-  background-color: #F2F2F2;
-  @include mixins.heading-font();
-  color: variables.$color-black;
+  background-color: variables.$color-concrete;
   text-transform: none;
   text-align: left;
 
@@ -98,6 +84,6 @@
   margin: 0;
   text-align: right;
   font-size: 12px;
-  color: rgba(51, 51, 51, 0.6);
-
+  color: variables.$color-mine-shaft;
+  opacity: 0.6;
 }

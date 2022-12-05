@@ -7,11 +7,11 @@
 
 .gallery__item {
   padding: 24px 20px 25px 20px;
-  border-bottom: 1px solid #E5E5E5;
+  border-bottom: 1px solid variables.$color-mercury;
   display: grid;
 
   &:first-child {
-    border-top: 1px solid #E5E5E5;
+    border-top: 1px solid variables.$color-mercury;
   }
 }
 
@@ -31,7 +31,6 @@
 .gallery__photo-author {
   @include mixins.basic-font();
   text-align: left;
-  color: variables.$color-mine-shaft;
   margin: 0;
   text-transform: none;
 }

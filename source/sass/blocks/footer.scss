@@ -10,7 +10,6 @@
 
 .footer__hashtag {
   @include mixins.heading-big-font();
-  color: variables.$color-black;
   margin: 0;
 }
 

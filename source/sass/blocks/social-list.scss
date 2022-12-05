@@ -1,3 +1,5 @@
+@use "../variables.scss";
+
 .social-list {
   display: flex;
   flex-wrap: wrap;
@@ -6,7 +8,7 @@
 }
 
 .social-list__icon {
-  fill: #FFFFFF;
+  fill: variables.$color-white;
 }
 
 .social-list__item + .social-list__item {
@@ -19,5 +21,5 @@
   align-items: center;
   width: 48px;
   height: 48px;
-  background-color: #81B3D2;
+  background-color: variables.$color-half-baked;
 }

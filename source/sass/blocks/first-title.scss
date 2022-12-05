@@ -3,5 +3,4 @@
 
 .first-title {
   @include mixins.heading-font();
-  color: variables.$color-black;
 }

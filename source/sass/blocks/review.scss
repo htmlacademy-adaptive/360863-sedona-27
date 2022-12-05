@@ -15,7 +15,6 @@
 
 .review__description {
   @include mixins.basic-font();
-  color: variables.$color-mine-shaft;
   margin: 24px 0 0 0;
   padding-right: 20px;
   padding-left: 20px;

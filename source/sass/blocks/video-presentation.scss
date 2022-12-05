@@ -9,13 +9,11 @@
 
 .video-presentation__title {
   @include mixins.heading-font();
-  color: variables.$color-black;
   margin: 0;
 }
 
 .video-presentation__description {
   @include mixins.basic-font();
-  color: variables.$color-mine-shaft;
   margin: 27px 0 0 0;
   padding-left: 8px;
   padding-right: 6px;

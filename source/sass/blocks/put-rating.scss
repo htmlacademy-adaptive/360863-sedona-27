@@ -1,3 +1,6 @@
+@use "../variables.scss";
+@use "../mixins.scss";
+
 .put-rating {
   display: inline-flex;
 }
@@ -10,5 +13,8 @@
 }
 
 .put-rating__counter {
+  @include mixins.basic-font;
+  color: variables.$color-black;
+  font-weight: variables.$weight-bold;
   margin-left: 14px;
 }

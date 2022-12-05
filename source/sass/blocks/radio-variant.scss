@@ -14,7 +14,7 @@
   width: 46px;
   height: 46px;
   border-radius: 50%;
-  background-color: #F2F2F2;
+  background-color: variables.$color-concrete;
 }
 
 .radio-variant__input:checked + .radio-variant__control::before {
@@ -25,11 +25,10 @@
   height: 16px;
   content: "";
   border-radius: 50%;
-  background-color: #333333;
+  background-color: variables.$color-mine-shaft;
 }
 
 .radio-variant__label {
   @include mixins.heading-font();
-  color: variables.$color-black;
   text-transform: none;
 }
