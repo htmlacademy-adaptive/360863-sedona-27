@@ -1,0 +1,22 @@
+@use "../variables.scss";
+@use "../mixins.scss";
+
+.hotel-request {
+  @include mixins.mobile-view-centered();
+  padding: 38px 18px 48px 18px;
+  box-sizing: border-box;
+}
+
+.hotel-request__heading {
+  @include mixins.heading-big-font();
+  margin: 0;
+}
+
+.hotel-request__description {
+  @include mixins.basic-font();
+  margin: 21px 0 0 0;
+}
+
+.hotel-request__link {
+  margin-top: 32px;
+}

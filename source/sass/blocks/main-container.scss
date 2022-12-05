@@ -1,0 +1,7 @@
+@use "../variables.scss";
+@use "../mixins.scss";
+
+.main-container__first-title {
+  @include mixins.mobile-view-centered();
+  margin-top: 37px;
+}

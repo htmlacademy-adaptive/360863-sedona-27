@@ -1,0 +1,74 @@
+@use "../variables.scss";
+
+.main-nav {
+  position: relative;
+}
+
+.main-nav__list {
+  display: none;
+  position: absolute;
+  top: 0;
+}
+
+.main-nav__list--shown {
+  display: block;
+}
+
+.main-nav__logo {
+  width: 185px;
+  height: 96px;
+  display: block;
+  margin: 0 auto;
+}
+
+.main-nav__toggle {
+  position: absolute;
+  width: 23px;
+  height: 22px;
+  top: 17px;
+  right: 20px;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+.main-nav__toggle-line {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 23px;
+  height: 4px;
+  background-color: variables.$color-half-baked;
+  -webkit-transition: 0.2s all linear;
+  transition: 0.2s all linear;
+}
+
+.main-nav__toggle-line--light {
+  background-color: variables.$color-white;
+}
+
+.main-nav__toggle-line-first {
+  top: 0;
+}
+
+.main-nav__toggle-line-second, .main-nav__toggle-line-third {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.main-nav__toggle-line-fourth {
+  bottom: 0;
+}
+
+.main-nav__toggle.active .main-nav__toggle-line-first,
+.main-nav__toggle.active .main-nav__toggle-line-fourth {
+  opacity: 0;
+}
+
+.main-nav__toggle.active .main-nav__toggle-line-second {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.main-nav__toggle.active .main-nav__toggle-line-third {
+  transform: translateY(-50%) rotate(-45deg);
+}

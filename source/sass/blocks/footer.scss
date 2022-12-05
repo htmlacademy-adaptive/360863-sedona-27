@@ -1,0 +1,22 @@
+@use "../variables.scss";
+@use "../mixins.scss";
+
+.footer {
+  @include mixins.mobile-view-centered();
+  display: grid;
+  justify-content: center;
+  padding: 24px 18px 23px 18px;
+}
+
+.footer__hashtag {
+  @include mixins.heading-big-font();
+  margin: 0;
+}
+
+.footer__social {
+  margin: 34px 0 0 0;
+}
+
+.footer__copyright {
+  margin-top: 40px;
+}

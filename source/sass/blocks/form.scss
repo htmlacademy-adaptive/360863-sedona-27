@@ -1,0 +1,89 @@
+@use "../variables.scss";
+@use "../mixins.scss";
+
+.form {
+  border-top: 1px solid variables.$color-mercury;
+}
+
+.form__fieldset {
+  position: relative;
+  margin: 0;
+  border: none;
+  padding: 20px 20px 24px 20px;
+
+  &:not(.form__fieldset--message) {
+    border-bottom: 1px solid variables.$color-mercury;
+  }
+}
+
+.form__fieldset--name {
+  padding-bottom: 39px;
+}
+
+.form__fieldset--contacts {
+  padding-bottom: 34px;
+}
+
+.form__legend {
+  @include mixins.heading-font();
+  padding: 24px 0 0 0;
+  width: 100%;
+}
+
+.form__item + .form__item {
+  margin-top: 16px;
+}
+
+.form__radio-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.form__radio-item + .form__radio-item {
+  display: block;
+  margin-top: 16px;
+}
+
+.form__checkbox-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.form__checkbox-item +  .form__checkbox-item {
+  display: block;
+  margin-top: 16px;
+}
+
+.form__textarea {
+  @include mixins.heading-font();
+  width: 100%;
+  min-height: 149px;
+  padding: 16px;
+  box-sizing: border-box;
+  resize: none;
+  border: none;
+  background-color: variables.$color-concrete;
+  text-transform: none;
+  text-align: left;
+
+  &::placeholder {
+    opacity: 0.3;
+  }
+}
+
+.form__button {
+  width: 280px;
+  margin: 28px auto 0 auto;
+}
+
+.form__hint {
+  @include mixins.basic-font();
+  padding: 0 20px;
+  margin: 0;
+  text-align: right;
+  font-size: 12px;
+  color: variables.$color-mine-shaft;
+  opacity: 0.6;
+}

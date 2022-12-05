@@ -1,1 +1,43 @@
-// Начните писать стили здесь
+/*Шрифт*/
+@use "fonts.scss";
+
+/*Блоки*/
+@use  "blocks/page.scss";
+@use  "blocks/main-header.scss";
+@use  "blocks/main-nav.scss";
+@use  "blocks/menu.scss";
+@use  "blocks/main-container";
+@use  "blocks/advantages";
+@use  "blocks/city-advantages";
+@use  "blocks/features-list";
+@use  "blocks/hotel-request";
+@use  "blocks/button-primary";
+@use  "blocks/map";
+@use  "blocks/footer";
+@use  "blocks/social-list";
+@use  "blocks/copyright";
+@use  "blocks/first-title";
+@use  "blocks/photo-gallery";
+@use  "blocks/gallery";
+@use  "blocks/put-rating";
+@use  "blocks/video-presentation";
+@use  "blocks/video-player";
+@use  "blocks/review";
+@use  "blocks/form";
+@use  "blocks/put-personal-data";
+@use  "blocks/radio-variant";
+@use  "blocks/checkbox-variant";
+@use  "blocks/pop-up";
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

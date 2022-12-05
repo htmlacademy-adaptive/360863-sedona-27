@@ -1,0 +1,20 @@
+@use "../variables.scss";
+@use "../mixins.scss";
+
+.photo-gallery {
+  @include mixins.mobile-view-centered();
+}
+
+.photo-gallery__description {
+  @include mixins.basic-font();
+  padding-right: 20px;
+  padding-left: 20px;
+  margin: 26px 0 0 0;
+}
+
+.photo-gallery__list {
+  box-sizing: border-box;
+  padding: 0;
+  margin-top: 36px;
+  margin-bottom: 0;
+}

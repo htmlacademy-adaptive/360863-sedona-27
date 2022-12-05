@@ -1,0 +1,40 @@
+@use "../variables.scss";
+@use "../mixins.scss";
+
+.gallery {
+  list-style-type: none;
+}
+
+.gallery__item {
+  padding: 24px 20px 25px 20px;
+  border-bottom: 1px solid variables.$color-mercury;
+  display: grid;
+
+  &:first-child {
+    border-top: 1px solid variables.$color-mercury;
+  }
+}
+
+.gallery__title {
+  @include mixins.basic-font();
+  font-weight: 700;
+  text-align: left;
+  margin: 15px 0 0 0;
+  color: variables.$color-black;
+}
+
+.gallery__photo {
+  vertical-align: bottom;
+  order: -1;
+}
+
+.gallery__photo-author {
+  @include mixins.basic-font();
+  text-align: left;
+  margin: 0;
+  text-transform: none;
+}
+
+.gallery__rating {
+  margin-top: 17px;
+}

@@ -1,0 +1,15 @@
+@use "../variables.scss";
+@use "../mixins.scss";
+
+.copyright {
+  @include mixins.basic-font();
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: variables.$color-black;
+  text-decoration: none;
+}
+
+.copyright__icon {
+  margin-left: 12px;
+}

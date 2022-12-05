@@ -1,0 +1,24 @@
+@use "../variables.scss";
+@use "../mixins.scss";
+
+.video-presentation {
+  @include mixins.mobile-view-centered();
+  padding: 17px 20px 0 20px;
+  box-sizing: border-box;
+}
+
+.video-presentation__title {
+  @include mixins.heading-font();
+  margin: 0;
+}
+
+.video-presentation__description {
+  @include mixins.basic-font();
+  margin: 27px 0 0 0;
+  padding-left: 8px;
+  padding-right: 6px;
+}
+
+.video-presentation__video {
+  margin-top: 38px;
+}

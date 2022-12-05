@@ -1,0 +1,12 @@
+@use "../variables.scss";
+@use "../mixins.scss";
+
+.button-primary {
+  @include mixins.heading-big-font();
+  display: block;
+  padding: 16px;
+  background-color: variables.$color-half-baked;
+  color: variables.$color-white;
+  text-decoration: none;
+  border: none;
+}

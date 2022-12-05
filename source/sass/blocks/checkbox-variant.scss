@@ -1,0 +1,28 @@
+@use "../variables.scss";
+@use "../mixins.scss";
+
+.checkbox-variant {
+  position: relative;
+  display: block;
+  padding: 10px 10px 10px 62px;
+}
+
+.checkbox-variant__control {
+  position: absolute;
+  left: 0;
+  top: calc(50% - 23px);
+  width: 46px;
+  height: 46px;
+  background-color: variables.$color-concrete;
+}
+
+.checkbox-variant__input:checked + .checkbox-variant__control {
+  background-image: url("../img/icons/checkbox-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.checkbox-variant__label {
+  @include mixins.heading-font();
+  text-transform: none;
+}

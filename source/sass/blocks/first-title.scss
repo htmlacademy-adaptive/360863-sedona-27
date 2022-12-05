@@ -1,0 +1,6 @@
+@use "../variables.scss";
+@use "../mixins.scss";
+
+.first-title {
+  @include mixins.heading-font();
+}

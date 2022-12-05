@@ -1,0 +1,18 @@
+@use "../variables.scss";
+@use "../mixins.scss";
+
+.put-phone__label {
+  @include mixins.basic-font();
+  text-align: left;
+  display: block;
+  padding-left: 15px;
+}
+
+.put-phone__input {
+  @include mixins.heading-font();
+  text-align: left;
+  text-transform: unset;
+  display: block;
+  padding: 16px 15px;
+  border: none;
+}

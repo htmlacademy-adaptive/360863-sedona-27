@@ -1,0 +1,12 @@
+@use "../variables.scss";
+@use "../mixins.scss";
+
+.map {
+  @include mixins.mobile-view-centered();
+  padding-bottom: 15px;
+}
+
+.map__image {
+  vertical-align: top;
+  background-color: variables.$color-cararra;
+}
