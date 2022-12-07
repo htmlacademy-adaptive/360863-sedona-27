@@ -2,21 +2,47 @@
 @use "../mixins.scss";
 
 .hotel-request {
-  @include mixins.mobile-view-centered();
   padding: 38px 18px 48px 18px;
   box-sizing: border-box;
+
+  @media (min-width: variables.$tablet-width) {
+    padding-top: 61px;
+    padding-bottom: 58px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding-bottom: 66px;
+  }
 }
 
 .hotel-request__heading {
   @include mixins.heading-big-font();
   margin: 0;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: variables.$font-size-extra-large;
+  }
 }
 
 .hotel-request__description {
   @include mixins.basic-font();
-  margin: 21px 0 0 0;
+  margin: 21px auto 0 auto;
+  max-width: 435px;
+
+  @media (min-width: variables.$tablet-width) {
+   margin-top: 30px;
+  }
 }
 
 .hotel-request__link {
-  margin-top: 32px;
+  margin: 32px auto 0 auto;
+  max-width: 458px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-top: 43px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-top: 48px;
+  }
 }

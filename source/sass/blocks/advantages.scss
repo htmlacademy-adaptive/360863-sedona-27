@@ -1,34 +1,73 @@
 @use "../mixins.scss";
+@use "../variables.scss";
 
 .advantages {
-  @include mixins.mobile-view-centered();
   padding-top: 34px;
+
+  @media (min-width: variables.$tablet-width) {
+    padding-top: 50px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding-top: 60px;
+  }
 }
 
 .advantages__title {
   @include mixins.heading-font();
-  margin: 0;
+  margin: 0 auto;
   padding: 0 18px 0 18px;
   box-sizing: border-box;
+  max-width: 520px;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: variables.$font-size-large;
+  }
 }
 
 .advantages__description {
   @include mixins.basic-font();
-  margin: 35px 0 0 0;
+  margin: 35px auto 0 auto;
   padding: 0 18px 0 18px;
+  max-width: 520px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-top: 28px;
+  }
 }
 
 .advantages__list {
   position: relative;
+  overflow: hidden;
+  margin-bottom: 0;
+
+
+  @media (min-width: variables.$tablet-width) {
+    max-width: variables.$desktop-width;
+    margin-top: 55px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-top: 45px;
+  }
 }
 
 .advantages__list::before {
   position: absolute;
   content: "";
-  top: 0;
-  width: 320px;
+  top: -1px;
+  left: calc(50% - 384px);
+  width: 768px;
+  max-width: 768px;
   height: 37px;
   background-image: url("../img/advantages-list-border-top.svg");
   background-position: center top;
   background-repeat: no-repeat;
+  background-color: variables.$color-half-baked;
+
+  @media (min-width: variables.$tablet-width) {
+    display: none;
+  }
 }

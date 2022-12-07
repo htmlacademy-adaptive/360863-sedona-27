@@ -3,9 +3,7 @@
 
 .main-header {
   position: relative;
-  max-width: 320px;
   min-height: 214px;
-  margin: 0 auto;
   background-image: url("../img/intro.jpg");
   background-position: center bottom;
   background-repeat: no-repeat;
@@ -14,4 +12,9 @@
 .main-header--welcome {
   min-height: 445px;
   background-image: url("../img/intro-welcome.jpg");
+
+  @media (min-width: variables.$tablet-width) {
+    background-image: url("../img/intro-welcome-1200.jpg");
+    min-height: 574px;
+  }
 }

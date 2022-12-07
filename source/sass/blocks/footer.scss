@@ -2,21 +2,47 @@
 @use "../mixins.scss";
 
 .footer {
-  @include mixins.mobile-view-centered();
   display: grid;
   justify-content: center;
   padding: 24px 18px 23px 18px;
+  margin: 0 auto;
+
+  @media (min-width: variables.$tablet-width) {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    max-width: variables.$desktop-width;
+  }
 }
 
 .footer__hashtag {
   @include mixins.heading-big-font();
   margin: 0;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-right: 24px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-right: 50px;
+  }
 }
 
 .footer__social {
-  margin: 34px 0 0 0;
+  margin: 34px auto 0 auto;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-top: 0;
+  }
 }
 
 .footer__copyright {
   margin-top: 40px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-top: 0;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-left: 22px;
+  }
 }
