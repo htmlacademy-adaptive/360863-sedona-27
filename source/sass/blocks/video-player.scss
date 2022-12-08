@@ -1,5 +1,27 @@
+@use "../variables.scss";
+@use "../mixins.scss";
+
 .video-player {
   position: relative;
+}
+
+.video-player__video {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+
+  @media (min-width: variables.$tablet-width) {
+    height: 500px;
+    width: 648px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    height: 500px;
+    width: 800px;
+  }
 }
 
 .video-player__button {

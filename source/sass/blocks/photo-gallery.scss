@@ -2,19 +2,35 @@
 @use "../mixins.scss";
 
 .photo-gallery {
-  @include mixins.mobile-view-centered();
 }
 
 .photo-gallery__description {
   @include mixins.basic-font();
   padding-right: 20px;
   padding-left: 20px;
-  margin: 26px 0 0 0;
+  margin: 26px auto 0 auto;
+  max-width: 458px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-top: 33px;
+  }
 }
 
 .photo-gallery__list {
   box-sizing: border-box;
   padding: 0;
-  margin-top: 36px;
-  margin-bottom: 0;
+  margin: 41px auto 0;
+  max-width: 320px;
+
+  @media (min-width: variables.$tablet-width) {
+    max-width: 768px;
+    padding: 0 60px;
+    margin-top: 80px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    max-width: 1200px;
+    margin-top: 88px;
+    padding: 0;
+  }
 }

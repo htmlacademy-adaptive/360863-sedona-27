@@ -2,23 +2,49 @@
 @use "../mixins.scss";
 
 .video-presentation {
-  @include mixins.mobile-view-centered();
-  padding: 17px 20px 0 20px;
+  padding: 17px 20px 7px 20px;
   box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 60px 60px 52px 60px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding-top: 60px;
+    padding-bottom: 95px;
+    max-width: 1200px;
+  }
 }
 
 .video-presentation__title {
   @include mixins.heading-font();
   margin: 0;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: variables.$font-size-extra-large;
+  }
 }
 
 .video-presentation__description {
   @include mixins.basic-font();
-  margin: 27px 0 0 0;
+  margin: 27px auto 0 auto;
   padding-left: 8px;
   padding-right: 6px;
+  max-width: 445px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-top: 30px;
+  }
 }
 
 .video-presentation__video {
   margin-top: 38px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-top: 90px;
+  }
 }

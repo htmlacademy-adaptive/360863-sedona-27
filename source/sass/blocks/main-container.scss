@@ -3,5 +3,13 @@
 
 .main-container__first-title {
   @include mixins.mobile-view-centered();
-  margin-top: 37px;
+  margin-top: 32px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-top: 66px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-top: 98px;
+  }
 }

@@ -3,4 +3,8 @@
 
 .first-title {
   @include mixins.heading-font();
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: variables.$font-size-extra-large;
+  }
 }

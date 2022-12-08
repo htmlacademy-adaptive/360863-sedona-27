@@ -17,4 +17,8 @@
   color: variables.$color-black;
   font-weight: variables.$weight-bold;
   margin-left: 14px;
+
+  @media (min-width: variables.$desktop-width) {
+    color: variables.$color-white;
+  }
 }

@@ -46,3 +46,14 @@
     margin-left: 22px;
   }
 }
+
+.footer__copyright--catalog {
+
+  @media (min-width: variables.$tablet-width) {
+    margin-left: 31px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+  margin-left: 55px;
+  }
+}
