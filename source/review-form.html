@@ -10,16 +10,16 @@
 <header class="main-header">
   <nav class="main-nav">
     <ul class="main-nav__list menu">
-      <li class="menu__item menu__item--current">
+      <li class="menu__item menu__item--main menu__item--current">
         <a class="menu__link" href="index.html">Главная</a>
       </li>
-      <li class="menu__item">
+      <li class="menu__item menu__item--catalog">
         <a class="menu__link" href="catalog.html">Фото и видео</a>
       </li>
-      <li class="menu__item">
+      <li class="menu__item menu__item--form">
         <a class="menu__link" href="review-form.html">Форма отзыва</a>
       </li>
-      <li class="menu__item">
+      <li class="menu__item menu__item--academy">
         <a class="menu__link" href="https://htmlacademy.ru/" target="_blank">Html Academy</a>
       </li>
     </ul>
@@ -65,7 +65,7 @@
         <input class="put-personal-data__input put-personal-data__input--email" type="email" name="email" id="email" placeholder="Введите e-mail" value="" required>
       </div>
     </fieldset>
-    <fieldset class="form__fieldset">
+    <fieldset class="form__fieldset form__fieldset--impression">
       <legend class="form__legend">Ваше общее впечатление:</legend>
       <ul class="form__radio-list">
         <li class="form__radio-item">
@@ -91,8 +91,8 @@
         </li>
       </ul>
     </fieldset>
-    <fieldset class="form__fieldset">
-      <legend class="form__legend">Посещенные достопримечательности:</legend>
+    <fieldset class="form__fieldset form__fieldset--attractions">
+      <legend class="form__legend">Посещенные <br class="form__fieldset-break">достопримечательности:</legend>
       <ul class="form__checkbox-list">
         <li class="form__checkbox-item">
           <label class="form__checkbox checkbox-variant">
@@ -128,7 +128,7 @@
       <legend class="form__legend">Опишите свои эмоции:</legend>
       <div class="form__text-area-wrapper">
         <label class="visually-hidden" for="message">Ваше сообщение</label>
-        <textarea class="form__textarea" name="message" id="message" cols="10" rows="3" placeholder="Опишите подробно свои восторги"></textarea>
+        <textarea class="form__textarea" name="message" id="message" cols="10" rows="3" placeholder="Опишите подробно все свои восторги"></textarea>
       </div>
     </fieldset>
     <button class="form__button button-primary" type="submit">Отправить отзыв</button>
@@ -178,7 +178,7 @@
       </a>
     </li>
   </ul>
-  <a class="footer__copyright copyright" href="https://htmlacademy.ru/">Разработано
+  <a class="footer__copyright footer__copyright--form copyright" href="https://htmlacademy.ru/">Разработано
     <span class="visually-hidden">Html Academy</span>
     <svg class="copyright__icon" width="27" height="35" xmlns="http://www.w3.org/2000/svg">
       <path d="M13.6 0h-.1L0 1.4v24.7l13.5 8 13.4-8V1.4L13.6 0ZM25 12.1 13.5 5.3v-.1h-.1l-.1-.1v.1L1.9 12.1v-9l11.5-1.2L25 3.1v9ZM13.4 6.8l11.5 6.7-4.5 2.6-7.1-4.2v1.4l5.9 3.5-.9.5-5-3v1.4l3.8 2.3-.8.5-3-1.8v1.4l1.9 1.1-1.8 1.1L2 13.6l11.4-6.8ZM1.9 15.1l11.4 6.8v1l-7.9-4.7v1.4l8 4.8v1.1l-8-4.7v1.4l8 4.8 8.1-4.9v-5.2l3.4-2v10l-11.5 6.9L1.9 25v-9.9Z"/>

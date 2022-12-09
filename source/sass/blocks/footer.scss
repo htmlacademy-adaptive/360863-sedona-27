@@ -57,3 +57,13 @@
   margin-left: 55px;
   }
 }
+
+.footer__copyright--form {
+  @media (min-width: variables.$tablet-width) {
+    margin-left: 32px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-left: 54px;
+  }
+}
