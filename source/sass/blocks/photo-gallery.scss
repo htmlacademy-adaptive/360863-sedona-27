@@ -1,9 +1,6 @@
 @use "../variables.scss";
 @use "../mixins.scss";
 
-.photo-gallery {
-}
-
 .photo-gallery__description {
   @include mixins.basic-font();
   padding-right: 20px;

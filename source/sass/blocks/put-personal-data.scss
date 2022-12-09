@@ -17,7 +17,7 @@
   padding: 16px 15px;
   box-sizing: border-box;
   border: none;
-  background-color: #F2F2F2;
+  background-color: variables.$color-concrete;
 
   &::placeholder {
     opacity: 0.3;
