@@ -21,15 +21,25 @@
 
 .form__fieldset {
   position: relative;
-  margin: 0;
   border: none;
   padding: 20px 20px 24px 20px;
+  margin: 25px 0 0 0;
 
   &:not(.form__fieldset--message) {
-    border-bottom: 1px solid variables.$color-mercury;
+    &::after {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      content: "";
+      width: 100%;
+      height: 1px;
+      background-color: variables.$color-mercury;
+    }
 
     @media (min-width: variables.$tablet-width) {
-      border-bottom: none;
+      &::after {
+        display: none;
+      }
     }
   }
 
@@ -50,8 +60,8 @@
     border-top: none;
 
     .form__legend {
-      padding-left: 21px;
-      padding-top: 24px;
+      margin-left: 21px;
+      margin-top: 24px;
     }
 
     .form__legend::after,
@@ -65,7 +75,7 @@
     margin-right: -14px;
 
     .form__legend {
-      padding-left: 31px;
+      margin-left: 31px;
     }
   }
 }
@@ -81,7 +91,7 @@
 
     .form__legend {
       text-align: left;
-      padding-top: 24px;
+      margin-top: 24px;
     }
 
     .form__item {
@@ -98,7 +108,7 @@
     padding-left: 72px;
 
     .form__legend {
-      padding-left: 36px;
+      margin-left: 36px;
     }
 
     .form__item {
@@ -143,7 +153,7 @@
 
 .form__legend {
   @include mixins.heading-font();
-  padding: 24px 0 0 0;
+  padding: 0 0 0 0;
   width: 100%;
 
   @media (min-width: variables.$tablet-width) {
