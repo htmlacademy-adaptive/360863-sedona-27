@@ -7,17 +7,69 @@
 }
 
 .features-list__item {
+  @include mixins.mobile-view-centered();
   padding-left: 47px;
+  box-sizing: border-box;
+}
+
+.features-list__item-break {
+  display: none;
+
+  @media (min-width: variables.$desktop-width) {
+    display: inline;
+  }
+}
+
+@media (min-width: variables.$tablet-width) {
+  .features-list__item--motel {
+    padding: 158px 33px 60px 33px;
+  }
+
+  .features-list__item--food {
+    padding: 156px 33px 61px 33px;
+  }
+
+  .features-list__item--souvenirs {
+    padding: 153px 33px 64px 33px;
+  }
+}
+
+@media (min-width: variables.$desktop-width) {
+  .features-list__item--motel {
+    padding: 169px 50px 69px 50px;
+    box-sizing: unset;
+  }
+
+  .features-list__item--food {
+    padding: 166px 50px 71px 50px;
+    box-sizing: unset;
+  }
+
+  .features-list__item--souvenirs {
+    padding: 170px 50px 67px 50px;
+    box-sizing: unset;
+  }
 }
 
 .features-list__item-title {
   @include mixins.heading-font();
   margin: 8px 0 0 0;
   text-align: left;
+
+  @media (min-width: variables.$tablet-width) {
+    text-align: center;
+    font-size: variables.$font-size-large;
+    margin: 0;
+  }
 }
 
 .features-list__item-description {
   @include mixins.basic-font();
   margin: 16px 0 0 0;
   text-align: left;
+
+  @media (min-width: variables.$tablet-width) {
+    text-align: center;
+    margin-top: 23px;
+  }
 }

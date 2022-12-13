@@ -2,11 +2,17 @@
 @use "../mixins.scss";
 
 .map {
-  @include mixins.mobile-view-centered();
   padding-bottom: 15px;
+  margin: 0 auto;
+
+  @media (min-width: variables.$tablet-width) {
+    max-width: variables.$desktop-width;
+  }
 }
 
 .map__image {
   vertical-align: top;
   background-color: variables.$color-cararra;
+  width: 100%;
+  object-fit: cover;
 }

@@ -5,10 +5,15 @@
   max-width: 320px;
 }
 
+@mixin tablet-view-centered {
+  margin: 0 auto;
+  max-width: 768px;
+}
+
 @mixin basic-font {
   font-family: variables.$font-family-basic;
   font-weight: variables.$weight-basic;
-  font-size: 14px;
+  font-size: variables.$font-size-basic;
   line-height: 21px;
   text-align: center;
   text-transform: uppercase;
@@ -18,7 +23,7 @@
 @mixin heading-font {
   font-family: variables.$font-family-basic;
   font-weight: variables.$weight-bold;
-  font-size: 18px;
+  font-size: variables.$font-size-big;
   line-height: 26px;
   text-align: center;
   text-transform: uppercase;
@@ -28,7 +33,7 @@
 @mixin heading-big-font {
   font-family: variables.$font-family-basic;
   font-weight: variables.$weight-bold;
-  font-size: 21px;
+  font-size: variables.$font-size-large;
   line-height: 26px;
   text-align: center;
   text-transform: uppercase;

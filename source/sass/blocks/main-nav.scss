@@ -1,4 +1,5 @@
 @use "../variables.scss";
+@use "../mixins.scss";
 
 .main-nav {
   position: relative;
@@ -8,6 +9,18 @@
   display: none;
   position: absolute;
   top: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: variables.$tablet-width) {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas: "main catalog empty form academy";
+    margin: 0 auto;
+    max-width: variables.$desktop-width;
+  }
 }
 
 .main-nav__list--shown {
@@ -19,6 +32,12 @@
   height: 96px;
   display: block;
   margin: 0 auto;
+
+  @media (min-width: variables.$tablet-width) {
+    position: absolute;
+    top: 0;
+    left: calc(50% - (185px) / 2);
+  }
 }
 
 .main-nav__toggle {
@@ -30,6 +49,10 @@
   border: none;
   background-color: inherit;
   cursor: pointer;
+
+  @media (min-width: variables.$tablet-width) {
+    display: none;
+  }
 }
 
 .main-nav__toggle-line {
@@ -51,7 +74,8 @@
   top: 0;
 }
 
-.main-nav__toggle-line-second, .main-nav__toggle-line-third {
+.main-nav__toggle-line-second,
+.main-nav__toggle-line-third {
   top: 50%;
   transform: translateY(-50%);
 }

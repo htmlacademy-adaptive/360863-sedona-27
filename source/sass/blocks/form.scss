@@ -3,31 +3,195 @@
 
 .form {
   border-top: 1px solid variables.$color-mercury;
+  display: grid;
+
+  @media (min-width: variables.$tablet-width) {
+    grid-template-columns: repeat(2, 1fr);
+    border-top: none;
+    padding: 54px 60px 45px 60px;
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 17px 120px 45px 120px;
+  }
 }
 
 .form__fieldset {
   position: relative;
-  margin: 0;
   border: none;
   padding: 20px 20px 24px 20px;
+  margin: 25px 0 0 0;
 
   &:not(.form__fieldset--message) {
-    border-bottom: 1px solid variables.$color-mercury;
+    &::after {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      content: "";
+      width: 100%;
+      height: 1px;
+      background-color: variables.$color-mercury;
+    }
+
+    @media (min-width: variables.$tablet-width) {
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    grid-column: 1 / -1;
+    padding: 0;
   }
 }
 
 .form__fieldset--name {
   padding-bottom: 39px;
+
+  @media (min-width: variables.$tablet-width) {
+    grid-column: 1 / 2;
+    padding-right: 43px;
+    padding-bottom: 15px;
+    border-right: 1px solid variables.$color-alto-second;
+    border-top: none;
+
+    .form__legend {
+      margin-left: 21px;
+      margin-top: 24px;
+    }
+
+    .form__legend::after,
+    .form__legend::before {
+      display: none;
+    }
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding-right: 63px;
+    margin-right: -14px;
+
+    .form__legend {
+      margin-left: 31px;
+    }
+  }
 }
 
 .form__fieldset--contacts {
   padding-bottom: 34px;
+  border-top: none;
+
+  @media (min-width: variables.$tablet-width) {
+    grid-column: 2 / 3;
+    padding-left: 26px;
+    padding-bottom: 15px;
+
+    .form__legend {
+      text-align: left;
+      margin-top: 24px;
+    }
+
+    .form__item {
+      padding-left: 18px;
+    }
+
+    .form__legend::after,
+    .form__legend::before {
+      display: none;
+    }
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding-left: 72px;
+
+    .form__legend {
+      margin-left: 36px;
+    }
+
+    .form__item {
+      padding-left: 7px;
+    }
+  }
+}
+
+.form__fieldset--impression {
+  padding-bottom: 8px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-top: 48px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-top: 56px;
+  }
+}
+
+.form__fieldset--attractions {
+  @media (min-width: variables.$tablet-width) {
+    margin-top: 25px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-top: 50px;
+  }
+}
+
+.form__fieldset--message {
+  @media (min-width: variables.$tablet-width) {
+    margin-top: 26px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-top: 71px;
+    padding-left: 96px;
+    padding-right: 96px;
+  }
 }
 
 .form__legend {
   @include mixins.heading-font();
-  padding: 24px 0 0 0;
+  padding: 0 0 0 0;
   width: 100%;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: variables.$font-size-large;
+    padding: 0;
+    margin: 24px 0 28px 0;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      height: 1px;
+      width: 123px;
+      background-color: variables.$color-alto-second;
+      top: 50%;
+      right: 0;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      height: 1px;
+      width: 123px;
+      background-color: variables.$color-alto-second;
+      top: 50%;
+      left: 0;
+    }
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    &::after {
+      width: 280px;
+    }
+
+    &::before {
+      width: 280px;
+    }
+  }
 }
 
 .form__item + .form__item {
@@ -38,22 +202,77 @@
   list-style-type: none;
   padding: 0;
   margin: 0;
+
+  @media (min-width: variables.$tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 36px;
+    padding-right: 36px;
+    justify-content: space-between;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding-left: 54px;
+    padding-right: 12px;
+    margin-top: 17px;
+  }
+}
+
+.form__radio-item {
+  margin-bottom: 16px;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 280px;
+  }
 }
 
 .form__radio-item + .form__radio-item {
   display: block;
   margin-top: 16px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-top: 0;
+  }
 }
 
 .form__checkbox-list {
   list-style-type: none;
   padding: 0;
   margin: 0;
+
+  @media (min-width: variables.$tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 84px;
+    padding-right: 84px;
+    justify-content: space-between;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-top: 31px;
+    padding-left: 44px;
+    padding-right: 35px;
+  }
 }
 
-.form__checkbox-item +  .form__checkbox-item {
+.form__checkbox-item + .form__checkbox-item {
   display: block;
   margin-top: 16px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-top: 0;
+  }
+}
+
+.form__checkbox-item {
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 16px;
+    width: 224px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: auto;
+  }
 }
 
 .form__textarea {
@@ -71,11 +290,25 @@
   &::placeholder {
     opacity: 0.3;
   }
+
+  @media (min-width: variables.$tablet-width) {
+    min-height: 160px;
+  }
 }
 
 .form__button {
   width: 280px;
   margin: 28px auto 0 auto;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 324px;
+    margin-top: 43px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 384px;
+    margin-left: 96px;
+  }
 }
 
 .form__hint {
@@ -86,4 +319,22 @@
   font-size: 12px;
   color: variables.$color-mine-shaft;
   opacity: 0.6;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: variables.$font-size-basic;
+    padding: 0;
+    margin-top: 66px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-right: 96px;
+  }
+}
+
+.form__fieldset-break {
+  display: none;
+
+  @media (min-width: variables.$tablet-width) {
+    display: inline;
+  }
 }
