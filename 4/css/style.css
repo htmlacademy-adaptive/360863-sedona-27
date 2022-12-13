@@ -17,6 +17,13 @@
   margin: 0;
 }
 
+.page__container {
+  max-width: 1200px;
+  box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .main-header {
   position: relative;
   min-height: 214px;
@@ -234,20 +241,23 @@
   }
 }
 
-.main-container__first-title {
-  margin: 0 auto;
-  max-width: 320px;
-  margin-top: 32px;
+.main-container {
+  padding-top: 32px;
 }
 @media (min-width: 768px) {
-  .main-container__first-title {
-    margin-top: 66px;
+  .main-container {
+    padding-top: 66px;
   }
 }
 @media (min-width: 1200px) {
-  .main-container__first-title {
-    margin-top: 98px;
+  .main-container {
+    padding-top: 98px;
   }
+}
+
+.main-container__first-title {
+  margin: 0 auto;
+  max-width: 320px;
 }
 
 .advantages {
@@ -414,30 +424,35 @@
     padding: 52px 50px;
   }
 }
-.city-advantages__item--no-image:not(:last-child) .city-advantages__description {
+.city-advantages__item--no-image .city-advantages__container {
+  padding-bottom: 22px;
+}
+@media (min-width: 768px) {
+  .city-advantages__item--no-image .city-advantages__container {
+    padding-bottom: 0;
+  }
+}
+.city-advantages__item--no-image:not(:last-child) .city-advantages__container {
   border-bottom: 1px solid #d6d6d6;
 }
 @media (min-width: 768px) {
-  .city-advantages__item--no-image:not(:last-child) .city-advantages__description {
+  .city-advantages__item--no-image:not(:last-child) .city-advantages__container {
     border-bottom: none;
   }
 }
 .city-advantages__item--no-image .city-advantages__title {
   margin: 0;
-  padding-bottom: 10px;
-}
-@media (min-width: 768px) {
-  .city-advantages__item--no-image .city-advantages__title {
-    padding-bottom: 18px;
-  }
 }
 .city-advantages__item--no-image .city-advantages__number {
-  margin: 0;
-  padding-bottom: 20px;
+  margin: 10px 0 0 0;
+}
+@media (min-width: 768px) {
+  .city-advantages__item--no-image .city-advantages__number {
+    margin-top: 18px;
+  }
 }
 .city-advantages__item--no-image .city-advantages__description {
-  margin: 0;
-  padding-bottom: 22px;
+  margin: 20px 0 0 0;
 }
 .city-advantages__item--no-image .city-advantages__item--title-break {
   display: none;
@@ -1304,16 +1319,22 @@
 
 .form__fieldset {
   position: relative;
-  margin: 0;
   border: none;
   padding: 20px 20px 24px 20px;
+  margin: 25px 0 0 0;
 }
-.form__fieldset:not(.form__fieldset--message) {
-  border-bottom: 1px solid #e5e5e5;
+.form__fieldset:not(.form__fieldset--message)::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #e5e5e5;
 }
 @media (min-width: 768px) {
-  .form__fieldset:not(.form__fieldset--message) {
-    border-bottom: none;
+  .form__fieldset:not(.form__fieldset--message)::after {
+    display: none;
   }
 }
 @media (min-width: 768px) {
@@ -1335,8 +1356,8 @@
     border-top: none;
   }
   .form__fieldset--name .form__legend {
-    padding-left: 21px;
-    padding-top: 24px;
+    margin-left: 21px;
+    margin-top: 24px;
   }
   .form__fieldset--name .form__legend::after,
 .form__fieldset--name .form__legend::before {
@@ -1349,7 +1370,7 @@
     margin-right: -14px;
   }
   .form__fieldset--name .form__legend {
-    padding-left: 31px;
+    margin-left: 31px;
   }
 }
 
@@ -1365,7 +1386,7 @@
   }
   .form__fieldset--contacts .form__legend {
     text-align: left;
-    padding-top: 24px;
+    margin-top: 24px;
   }
   .form__fieldset--contacts .form__item {
     padding-left: 18px;
@@ -1380,7 +1401,7 @@
     padding-left: 72px;
   }
   .form__fieldset--contacts .form__legend {
-    padding-left: 36px;
+    margin-left: 36px;
   }
   .form__fieldset--contacts .form__item {
     padding-left: 7px;
@@ -1433,7 +1454,7 @@
   text-align: center;
   text-transform: uppercase;
   color: #000000;
-  padding: 24px 0 0 0;
+  padding: 0 0 0 0;
   width: 100%;
 }
 @media (min-width: 768px) {
@@ -1651,7 +1672,7 @@
   color: #333333;
   text-align: left;
   display: block;
-  padding-left: 15px;
+  margin-left: 15px;
 }
 
 .put-personal-data__input {
