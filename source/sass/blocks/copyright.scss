@@ -8,6 +8,30 @@
   justify-content: center;
   color: variables.$color-black;
   text-decoration: none;
+
+  &:hover {
+    color: variables.$color-half-baked;
+
+    .copyright__icon {
+      fill: variables.$color-half-baked;
+    }
+  }
+
+  &:active {
+    color: variables.$color-nobel;
+
+    .copyright__icon {
+      fill: variables.$color-nobel;
+    }
+  }
+
+  &:focus-visible {
+    color: variables.$color-half-baked;
+
+    .copyright__icon {
+      fill: variables.$color-half-baked;
+    }
+  }
 }
 
 .copyright__icon {

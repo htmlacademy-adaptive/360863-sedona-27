@@ -5,6 +5,22 @@
   position: relative;
   display: block;
   padding: 10px 10px 10px 62px;
+
+  &:hover .radio-variant__control {
+    background-color: variables.$color-mercury;
+  }
+
+  &:active .radio-variant__control {
+    background-color: variables.$color-alto-third;
+  }
+
+  &:active .radio-variant__control::before {
+    opacity: 0.3;
+  }
+
+  &:focus-within .radio-variant__control {
+    background-color: variables.$color-mercury;
+  }
 }
 
 .radio-variant__control {

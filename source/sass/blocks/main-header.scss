@@ -2,6 +2,7 @@
 @use "../mixins.scss";
 
 .main-header {
+  background-color: variables.$color-welcome;
   position: relative;
   min-height: 214px;
   background-image: url("../img/intro.jpg");

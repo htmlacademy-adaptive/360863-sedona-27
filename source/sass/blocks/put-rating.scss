@@ -22,3 +22,19 @@
     color: variables.$color-white;
   }
 }
+
+.put-rating__button:hover + .put-rating__counter {
+  color: variables.$color-half-baked;
+}
+
+.put-rating__button:active + .put-rating__counter {
+  color: variables.$color-nobel;
+}
+
+.put-rating__button:focus-visible {
+  outline: none;
+}
+
+.put-rating__button:focus-visible + .put-rating__counter {
+  color: variables.$color-half-baked;
+}
