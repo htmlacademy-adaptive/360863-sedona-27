@@ -56,6 +56,33 @@
   }
 }
 
+.main-header--nojs.main-header {
+  min-height: 437px;
+  background-color: #ffffff;
+}
+@media (min-width: 768px) {
+  .main-header--nojs.main-header {
+    min-height: 344px;
+    background-color: #71a0c4;
+  }
+}
+@media (min-width: 1200px) {
+  .main-header--nojs.main-header {
+    min-height: 357px;
+  }
+}
+
+.main-header--nojs.main-header--welcome {
+  min-height: 668px;
+  background-color: #ffffff;
+}
+@media (min-width: 768px) {
+  .main-header--nojs.main-header--welcome {
+    min-height: 574px;
+    background-color: #71a0c4;
+  }
+}
+
 .main-nav {
   position: relative;
   background-color: #ffffff;
@@ -83,6 +110,19 @@
 
 .main-nav__list--shown {
   display: block;
+}
+@media (min-width: 768px) {
+  .main-nav__list--shown {
+    display: grid;
+  }
+}
+
+.main-nav__list.main-nav__list--nojs {
+  position: relative;
+}
+
+.main-nav__toggle.main-nav__toggle--nojs {
+  display: none;
 }
 
 .main-nav__logo {
