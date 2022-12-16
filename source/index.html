@@ -8,9 +8,9 @@
   </head>
   <body class="page__body">
     <div class="page__container">
-      <header class="main-header main-header--welcome">
+      <header class="main-header main-header--welcome main-header--nojs"> <!--main-header&#45;&#45;nojs убирается если не работает js-->
         <nav class="main-nav">
-          <ul class="main-nav__list main-nav__list--shown menu">
+          <ul class="main-nav__list main-nav__list--shown main-nav__list--nojs menu"> <!--main-nav__list&#45;&#45;nojs убирается если не работает js-->
             <li class="menu__item menu__item--main menu__item--current">
               <a class="menu__link" href="index.html">Главная</a>
             </li>
@@ -27,7 +27,7 @@
           <a class="main-nav__logo" href="index.html">
             <img src="img/logo.png" alt="логотип Sedona." width="185" height="96">
           </a>
-          <button class="main-nav__toggle" type="button">
+          <button class="main-nav__toggle main-nav__toggle--nojs" type="button"> <!--main-nav__toggle&#45;&#45;nojs убирается если не работает js-->
             <span class="visually-hidden">открыть меню.</span>
             <span class="main-nav__toggle-line main-nav__toggle-line-first"></span>
             <span class="main-nav__toggle-line main-nav__toggle-line-second"></span>

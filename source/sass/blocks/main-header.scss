@@ -29,3 +29,27 @@
     min-height: 574px;
   }
 }
+
+.main-header--nojs.main-header {
+  min-height: 437px;
+  background-color: variables.$color-white;
+
+  @media (min-width: variables.$tablet-width) {
+    min-height: 344px;
+    background-color: variables.$color-welcome;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    min-height: 357px;
+  }
+}
+
+.main-header--nojs.main-header--welcome {
+  min-height: 668px;
+  background-color: variables.$color-white;
+
+  @media (min-width: variables.$tablet-width) {
+    min-height: 574px;
+    background-color: variables.$color-welcome;
+  }
+}

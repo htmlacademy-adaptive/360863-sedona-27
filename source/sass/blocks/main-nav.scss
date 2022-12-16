@@ -27,6 +27,18 @@
 
 .main-nav__list--shown {
   display: block;
+
+  @media (min-width: variables.$tablet-width) {
+    display: grid;
+  }
+}
+
+.main-nav__list.main-nav__list--nojs {
+  position: relative;
+}
+
+.main-nav__toggle.main-nav__toggle--nojs {
+  display: none;
 }
 
 .main-nav__logo {
