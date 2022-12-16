@@ -26,4 +26,31 @@
 
 .video-player__button {
   position: absolute;
+  width: 48px;
+  height: 54px;
+  background-image: url("../img/icons/video-button.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  border: none;
+  left: calc(50% - 24px);
+  top: calc(50% - 27px);
+}
+
+.video-player__button:hover {
+  opacity: 0.8;
+}
+
+.video-player__button:active {
+  opacity: 0.3;
+}
+
+.video-player__button:focus-visible {
+  outline: none;
+  opacity: 0.8;
+}
+
+.video-player__button:disabled {
+  cursor: unset;
+  opacity: 0.3;
 }

@@ -10,4 +10,24 @@
   text-decoration: none;
   border: none;
   box-sizing: border-box;
+  cursor: pointer;
+
+  &:hover {
+    background-color: variables.$color-fountain-blue;
+  }
+
+  &:active {
+    background-color: variables.$color-steel-blue;
+    color: variables.$color-white-opasity;
+  }
+
+  &:focus-visible {
+    background-color: variables.$color-fountain-blue;
+    outline: none;
+  }
+
+  &:disabled {
+    cursor: unset;
+    background-color: variables.$color-mercury;
+  }
 }

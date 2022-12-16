@@ -294,6 +294,21 @@
   @media (min-width: variables.$tablet-width) {
     min-height: 160px;
   }
+
+  &:hover {
+    background-color: variables.$color-mercury;
+  }
+
+  &:active {
+    background-color: transparent;
+    outline: 4px solid variables.$color-mercury;
+    outline-offset: -4px;
+  }
+
+  &:focus-visible {
+    background-color: variables.$color-mercury;
+    outline: none;
+  }
 }
 
 .form__button {

@@ -22,4 +22,21 @@
   width: 48px;
   height: 48px;
   background-color: variables.$color-half-baked;
+
+  &:hover {
+    background-color: variables.$color-fountain-blue;
+  }
+
+  &:active {
+    background-color: variables.$color-steel-blue;
+
+    .social-list__icon {
+      opacity: 0.3;
+    }
+  }
+
+  &:focus-visible {
+    background-color: variables.$color-fountain-blue;
+    outline: none;
+  }
 }

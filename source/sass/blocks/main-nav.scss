@@ -3,6 +3,8 @@
 
 .main-nav {
   position: relative;
+  background-color: variables.$color-white;
+  height: 56px;
 }
 
 .main-nav__list {
@@ -25,6 +27,18 @@
 
 .main-nav__list--shown {
   display: block;
+
+  @media (min-width: variables.$tablet-width) {
+    display: grid;
+  }
+}
+
+.main-nav__list.main-nav__list--nojs {
+  position: relative;
+}
+
+.main-nav__toggle.main-nav__toggle--nojs {
+  display: none;
 }
 
 .main-nav__logo {
@@ -32,6 +46,18 @@
   height: 96px;
   display: block;
   margin: 0 auto;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:focus-visible {
+    opacity: 0.6;
+  }
 
   @media (min-width: variables.$tablet-width) {
     position: absolute;
@@ -47,12 +73,52 @@
   top: 17px;
   right: 20px;
   border: none;
-  background-color: inherit;
+  background-color: transparent;
   cursor: pointer;
 
   @media (min-width: variables.$tablet-width) {
     display: none;
   }
+}
+
+.main-nav__toggle:hover .main-nav__toggle-line {
+  opacity: 0.6;
+}
+
+.main-nav__toggle:active .main-nav__toggle-line {
+  opacity: 0.3;
+}
+
+.main-nav__toggle:hover .main-nav__toggle-line-second {
+  opacity: 0;
+}
+
+.main-nav__toggle:active .main-nav__toggle-line-second {
+  opacity: 0;
+}
+
+.main-nav__toggle:focus-visible .main-nav__toggle-line-second {
+  opacity: 0;
+}
+
+.main-nav__toggle--active:hover .main-nav__toggle-line-second {
+  opacity: 0.6;
+}
+
+.main-nav__toggle--active:active .main-nav__toggle-line-second {
+  opacity: 0.3;
+}
+
+.main-nav__toggle--active:focus-visible .main-nav__toggle-line-second {
+  opacity: 0.6;
+}
+
+.main-nav__toggle:focus-visible {
+  outline: none;
+}
+
+.main-nav__toggle:focus-visible .main-nav__toggle-line {
+  opacity: 0.6;
 }
 
 .main-nav__toggle-line {
@@ -62,12 +128,8 @@
   width: 23px;
   height: 4px;
   background-color: variables.$color-half-baked;
-  -webkit-transition: 0.2s all linear;
+  -webkit-transition: 0.2s all linear; /*stylelint-disable-line  property-no-vendor-prefix*/
   transition: 0.2s all linear;
-}
-
-.main-nav__toggle-line--light {
-  background-color: variables.$color-white;
 }
 
 .main-nav__toggle-line-first {
@@ -84,15 +146,18 @@
   bottom: 0;
 }
 
-.main-nav__toggle.active .main-nav__toggle-line-first,
-.main-nav__toggle.active .main-nav__toggle-line-fourth {
+.main-nav__toggle.main-nav__toggle--active .main-nav__toggle-line-first,
+.main-nav__toggle.main-nav__toggle--active .main-nav__toggle-line-fourth {
   opacity: 0;
+  background-color: variables.$color-white;
 }
 
-.main-nav__toggle.active .main-nav__toggle-line-second {
+.main-nav__toggle.main-nav__toggle--active .main-nav__toggle-line-second {
   transform: translateY(-50%) rotate(45deg);
+  background-color: variables.$color-white;
 }
 
-.main-nav__toggle.active .main-nav__toggle-line-third {
+.main-nav__toggle.main-nav__toggle--active .main-nav__toggle-line-third {
   transform: translateY(-50%) rotate(-45deg);
+  background-color: variables.$color-white;
 }

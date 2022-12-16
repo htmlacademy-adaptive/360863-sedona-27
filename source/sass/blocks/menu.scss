@@ -13,10 +13,18 @@
 .menu__item {
   position: relative;
   text-align: center;
-  box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2), inset 0 2px 0 rgba(255, 255, 255, 0.2);
 
   @media (min-width: variables.$tablet-width) {
     box-shadow: none;
+  }
+}
+
+.menu__item--current {
+  @media (min-width: variables.$tablet-width) {
+    .menu__link {
+      color: variables.$color-pine-cone;
+    }
   }
 }
 
@@ -59,6 +67,20 @@
   text-decoration: none;
   color: variables.$color-white;
 
+  &:hover {
+    background-color: variables.$color-fountain-blue;
+  }
+
+  &:active {
+    background-color: variables.$color-steel-blue;
+    opacity: 0.3;
+  }
+
+  &:focus-visible {
+    background-color: variables.$color-fountain-blue;
+    outline: none;
+  }
+
   @media (min-width: variables.$tablet-width) {
     @include mixins.basic-font();
     color: variables.$color-black;
@@ -66,6 +88,23 @@
     width: 153px;
     padding: 18px 5px 17px 5px;
     box-sizing: border-box;
+
+    &:hover {
+      color: variables.$color-half-baked;
+      background-color: transparent;
+    }
+
+    &:active {
+      background-color: transparent;
+      color: variables.$color-black;
+      opacity: 0.3;
+    }
+
+    &:focus-visible {
+      background-color: transparent;
+      color: variables.$color-half-baked;
+      outline: none;
+    }
   }
 
   @media (min-width: variables.$desktop-width) {

@@ -4,20 +4,22 @@
   <link rel="stylesheet" href="css/style.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" href="img/favicon/favicon.png" sizes="32x32">
   <title>Оставьте отзыв</title>
 </head>
 <body class="page__body">
   <div class="page__container">
-    <header class="main-header">
+    <header class="main-header main-header--nojs"> <!--main-header&#45;&#45;nojs убирается если не работает js-->
       <nav class="main-nav">
-        <ul class="main-nav__list menu">
-          <li class="menu__item menu__item--main menu__item--current">
+        <ul class="main-nav__list main-nav__list--shown main-nav__list--nojs menu"> <!--main-nav__list&#45;&#45;nojs убирается если не работает js-->
+          <li class="menu__item menu__item--main">
             <a class="menu__link" href="index.html">Главная</a>
           </li>
           <li class="menu__item menu__item--catalog">
             <a class="menu__link" href="catalog.html">Фото и видео</a>
           </li>
-          <li class="menu__item menu__item--form">
+          <li class="menu__item menu__item--form menu__item--current">
             <a class="menu__link" href="review-form.html">Форма отзыва</a>
           </li>
           <li class="menu__item menu__item--academy">
@@ -27,7 +29,7 @@
         <a class="main-nav__logo" href="index.html">
           <img src="img/logo.png" alt="логотип Sedona." width="185" height="96">
         </a>
-        <button class="main-nav__toggle" type="button">
+        <button class="main-nav__toggle main-nav__toggle--nojs" type="button"> <!--main-nav__toggle&#45;&#45;nojs убирается если не работает js-->
           <span class="visually-hidden">открыть меню.</span>
           <span class="main-nav__toggle-line main-nav__toggle-line-first"></span>
           <span class="main-nav__toggle-line main-nav__toggle-line-second"></span>
@@ -137,17 +139,16 @@
       </form>
       <div class="pop-up pop-up--hidden pop-up--error">
         <div class="pop-up__container">
-          <p class="pop-up__title">Что-то пошло не так!</p>
+          <p class="pop-up__title">Что-то пошло <br class="pop-up__break">не так!</p>
           <p class="pop-up__description">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
           <button class="pop-up__button button-primary" type="button">Ок</button>
         </div>
       </div>
-
       <div class="pop-up pop-up--hidden pop-up--success">
         <div class="pop-up__container">
           <p class="pop-up__title">Ваш отзыв отправлен!</p>
-          <p class="pop-up__description">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В&nbsp;ближайшее время мы опубликуем его на сайте.</p>
-          <button class="pop-up__button button-primary" type="button">Ок</button>
+          <p class="pop-up__description">Спасибо за ваше участие, ваш отзыв уже поступил к нам. <br class="pop-up__break">В&nbsp;ближайшее время мы опубликуем его на сайте.</p>
+          <button class="pop-up__button button-primary" type="button">Закрыть окно</button>
         </div>
       </div>
     </main>
