@@ -113,16 +113,16 @@
 
 .gallery__photo {
   vertical-align: bottom;
+  object-fit: cover;
+  max-width: 100%;
 
   @media (min-width: variables.$tablet-width) {
     width: 324px;
     height: 267px;
-    object-fit: cover;
   }
 
   @media (min-width: variables.$desktop-width) {
     width: 100%;
-    object-fit: cover;
   }
 }
 
