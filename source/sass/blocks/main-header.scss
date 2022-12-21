@@ -9,14 +9,29 @@
   background-position: center bottom;
   background-repeat: no-repeat;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/intro@2x.jpg");
+    background-size: 902px auto;
+  }
+
   @media (min-width: variables.$tablet-width) {
     background-image: url("../img/intro-1200.jpg");
     min-height: 346px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/intro-1200@2x.jpg");
+      background-size: 1200px auto;
+    }
   }
 
   @media (min-width: variables.$desktop-width) {
     background-image: url("../img/intro-1200-desktop.jpg");
     min-height: 357px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/intro-1200-desktop@2x.jpg");
+      background-size: 1200px auto;
+    }
   }
 }
 
@@ -24,9 +39,19 @@
   min-height: 445px;
   background-image: url("../img/intro-welcome.jpg");
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/intro-welcome@2x.jpg");
+    background-size: 901px auto;
+  }
+
   @media (min-width: variables.$tablet-width) {
     background-image: url("../img/intro-welcome-1200.jpg");
     min-height: 574px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/intro-welcome-1200@2x.jpg");
+      background-size: 1200px auto;
+    }
   }
 }
 

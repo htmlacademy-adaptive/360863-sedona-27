@@ -4,6 +4,11 @@
     <link rel="stylesheet" href="css/style.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicon/favicon-svg.svg" type="image/svg+xml">
+    <link rel="icon" type="image/png" href="img/favicon/favicon-32.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="manifest.webmanifest">
     <title>HTML Academy: Седона</title>
   </head>
   <body class="page__body">
@@ -25,7 +30,7 @@
             </li>
           </ul>
           <a class="main-nav__logo" href="index.html">
-            <img src="img/logo.png" alt="логотип Sedona." width="185" height="96">
+            <img src="img/logo.png" alt="логотип Sedona." width="185" height="96" srcset="img/logo@2x.png 2x">
           </a>
           <button class="main-nav__toggle main-nav__toggle--nojs" type="button"> <!--main-nav__toggle&#45;&#45;nojs убирается если не работает js-->
             <span class="visually-hidden">открыть меню.</span>
@@ -49,10 +54,12 @@
                 <p class="city-advantages__number">— №1 —</p>
                 <p class="city-advantages__description">Седона не аттракцион для туристов, там&nbsp;течет своя жизнь</p>
               </div>
-              <picture class="city-advantages__image-wrapper">
-                <source srcset="img/real-town-desctop.jpg" media="(min-width: 768px)">
-                <img class="city-advantages__image" src="img/real-town.jpg" alt="настоящий городок." width="320" height="260">
-              </picture>
+              <div class="city-advantages__image-wrapper">
+                <picture>
+                  <source media="(min-width: 768px)" width="800" height="256" srcset="img/real-town-desktop.jpg 1x, img/real-town-desktop@2x.jpg 2x">
+                  <img class="city-advantages__image" src="img/real-town.jpg" alt="настоящий городок." width="320" height="260" srcset="img/real-town@2x.jpg 2x">
+                </picture>
+              </div>
               <ul class="city-advantages__sublist features-list">
                 <li class="features-list__item features-list__item--motel">
                   <h4 class="features-list__item-title">Жилье</h4>
@@ -74,10 +81,12 @@
                 <p class="city-advantages__number">— №2 —</p>
                 <p class="city-advantages__description">Да, по нему можно пройти!<br class="city-advantages__item--description-break">Если вы осмелитесь,&nbsp;конечно</p>
               </div>
-              <picture class="city-advantages__image-wrapper">
-                <source srcset="img/devil-bridge-desktop.jpg" media="(min-width: 768px)">
-                <img class="city-advantages__image" src="img/devil-bridge.jpg" alt="мост дъявола." width="320" height="260">
-              </picture>
+              <div class="city-advantages__image-wrapper">
+                <picture>
+                  <source media="(min-width: 768px)" width="800" height="256" srcset="img/devil-bridge-desktop.jpg 1x, img/devil-bridge-desktop@2x.jpg 2x">
+                  <img class="city-advantages__image" src="img/devil-bridge.jpg" alt="мост дъявола." width="320" height="260" srcset="img/devil-bridge-desktop@2x.jpg 2x">
+                </picture>
+              </div>
             </li>
             <li class="city-advantages__item city-advantages__item--square city-advantages__item--no-image">
               <div class="city-advantages__container">
@@ -110,7 +119,10 @@
         </section>
         <section class="map">
           <h2 class="visually-hidden">Карта Седоны</h2>
-          <img class="map__image" src="img/map.jpg" alt="Америка, штат Аризона, Седона." width="1200" height="350">
+          <picture>
+            <source media="(min-width: 768px)" width="1200" height="350" srcset="img/map.jpg 1x, img/map@2x.jpg 2x">
+            <img class="map__image" src="img/map-mobile.jpg" alt="Америка, штат Аризона, Седона." width="768" height="350" srcset="img/map-mobile@2x.jpg 2x">
+          </picture>
         </section>
       </main>
       <footer class="footer">
