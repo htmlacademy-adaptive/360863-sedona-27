@@ -353,3 +353,15 @@
     display: inline;
   }
 }
+
+.form__fieldset--message .form__legend::before {
+  @media (min-width: variables.$desktop-width) {
+    left: -96px;
+  }
+}
+
+.form__fieldset--message .form__legend::after {
+  @media (min-width: variables.$desktop-width) {
+    right: -96px;
+  }
+}

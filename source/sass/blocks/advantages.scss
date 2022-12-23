@@ -2,14 +2,13 @@
 @use "../variables.scss";
 
 .advantages {
-  padding-top: 34px;
 
   @media (min-width: variables.$tablet-width) {
     padding-top: 50px;
   }
 
   @media (min-width: variables.$desktop-width) {
-    padding-top: 60px;
+    padding-top: 0;
   }
 }
 
