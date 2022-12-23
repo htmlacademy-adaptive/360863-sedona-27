@@ -3,6 +3,7 @@
 
 .main-container {
   padding-top: 32px;
+  flex-grow: 1;
 
   @media (min-width: variables.$tablet-width) {
     padding-top: 0;

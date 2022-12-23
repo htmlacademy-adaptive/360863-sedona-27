@@ -30,7 +30,10 @@
         </li>
       </ul>
       <a class="main-nav__logo" href="index.html">
-        <img src="img/logo.png" alt="логотип Sedona." width="185" height="96" srcset="img/logo@2x.png 2x">
+        <picture>
+          <source type="image/webp" srcset="img/logo.webp 1x, img/logo@2x.webp 2x">
+          <img src="img/logo.png" alt="логотип Sedona." width="185" height="96" srcset="img/logo@2x.png 2x">
+        </picture>
       </a>
       <button class="main-nav__toggle main-nav__toggle--nojs" type="button"> <!--main-nav__toggle&#45;&#45;nojs убирается если не работает js-->
         <span class="visually-hidden">открыть меню.</span>
@@ -65,7 +68,7 @@
         <div class="form__item put-personal-data">
           <label class="put-personal-data__label" for="phone">Контактный телефон*:</label>
           <div class="put-personal-data__input-wrapper">
-            <svg class="put-personal-data__icon" width="58" height="58">
+            <svg class="put-personal-data__icon" width="58" height="58" aria-hidden="true" focusable="false">
               <use href="img/icons/form-sprite-icons.svg#telephone-icon"></use>
             </svg>
             <input class="put-personal-data__input put-personal-data__input--phone" type="text" name="phone" id="phone" placeholder="Введите телефон" value="" required>
@@ -74,7 +77,7 @@
         <div class="form__item put-personal-data">
           <label class="put-personal-data__label" for="email">Электронная почта*:</label>
           <div class="put-personal-data__input-wrapper">
-            <svg class="put-personal-data__icon" width="58" height="58">
+            <svg class="put-personal-data__icon" width="58" height="58" aria-hidden="true" focusable="false">
               <use href="img/icons/form-sprite-icons.svg#mail-icon"></use>
             </svg>
             <input class="put-personal-data__input put-personal-data__input--email" type="email" name="email" id="email" placeholder="Введите e-mail" value="" required>
@@ -170,7 +173,7 @@
     <ul class="footer__social social-list">
       <li class="social-list__item">
         <a class="social-list__link" href="https://vk.com/htmlacademy">
-          <svg class="social-list__icon" width="24" height="24">
+          <svg class="social-list__icon" width="24" height="24" aria-hidden="true" focusable="false">
             <use href="img/icons/form-sprite-icons.svg#social-vk-icon"></use>
           </svg>
           <span class="visually-hidden">вконтакте.</span>
@@ -178,7 +181,7 @@
       </li>
       <li class="social-list__item">
         <a class="social-list__link" href="https://t.me/htmlacademy">
-          <svg class="social-list__icon" width="24" height="24">
+          <svg class="social-list__icon" width="24" height="24" aria-hidden="true" focusable="false">
             <use href="img/icons/form-sprite-icons.svg#social-telegram-icon"></use>
           </svg>
           <span class="visually-hidden">телеграм.</span>
@@ -186,7 +189,7 @@
       </li>
       <li class="social-list__item">
         <a class="social-list__link" href="https://www.youtube.com/user/htmlacademyru">
-          <svg class="social-list__icon" width="24" height="24">
+          <svg class="social-list__icon" width="24" height="24" aria-hidden="true" focusable="false">
             <use href="img/icons/form-sprite-icons.svg#social-youtube-icon"></use>
           </svg>
           <span class="visually-hidden">ютуб.</span>
@@ -195,7 +198,7 @@
     </ul>
     <a class="footer__copyright footer__copyright--form copyright" href="https://htmlacademy.ru/">Разработано
       <span class="visually-hidden">Html Academy</span>
-      <svg class="copyright__icon" width="27" height="35">
+      <svg class="copyright__icon" width="27" height="35" aria-hidden="true" focusable="false">
         <use href="img/icons/form-sprite-icons.svg#htmlacademy-logo"></use>
       </svg>
     </a>

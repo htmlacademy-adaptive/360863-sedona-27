@@ -30,7 +30,10 @@
             </li>
           </ul>
           <a class="main-nav__logo" href="index.html">
-            <img src="img/logo.png" alt="логотип Sedona." width="185" height="96" srcset="img/logo@2x.png 2x">
+            <picture>
+              <source type="image/webp" srcset="img/logo.webp 1x, img/logo@2x.webp 2x">
+              <img src="img/logo.png" alt="логотип Sedona." width="185" height="96" srcset="img/logo@2x.png 2x">
+            </picture>
           </a>
           <button class="main-nav__toggle main-nav__toggle--nojs" type="button"> <!--main-nav__toggle&#45;&#45;nojs убирается если не работает js-->
             <span class="visually-hidden">открыть меню.</span>
@@ -56,6 +59,9 @@
               </div>
               <div class="city-advantages__image-wrapper">
                 <picture>
+                  <source type="image/webp" media="(min-width: 768px)" width="800" height="256" srcset="img/real-town-desktop.webp 1x, img/real-town-desktop@2x.webp 2x">
+                  <source type="image/webp" srcset="img/real-town.webp 1x, img/real-town@2x.webp 2x">
+
                   <source media="(min-width: 768px)" width="800" height="256" srcset="img/real-town-desktop.jpg 1x, img/real-town-desktop@2x.jpg 2x">
                   <img class="city-advantages__image" src="img/real-town.jpg" alt="настоящий городок." width="320" height="260" srcset="img/real-town@2x.jpg 2x">
                 </picture>
@@ -83,6 +89,9 @@
               </div>
               <div class="city-advantages__image-wrapper">
                 <picture>
+                  <source type="image/webp" media="(min-width: 768px)" width="800" height="256" srcset="img/devil-bridge-desktop.webp 1x, img/devil-bridge-desktop@2x.webp 2x">
+                  <source type="image/webp" srcset="img/devil-bridge.webp 1x, img/devil-bridge@2x.webp 2x">
+
                   <source media="(min-width: 768px)" width="800" height="256" srcset="img/devil-bridge-desktop.jpg 1x, img/devil-bridge-desktop@2x.jpg 2x">
                   <img class="city-advantages__image" src="img/devil-bridge.jpg" alt="мост дъявола." width="320" height="260" srcset="img/devil-bridge-desktop@2x.jpg 2x">
                 </picture>
@@ -120,6 +129,9 @@
         <section class="map">
           <h2 class="visually-hidden">Карта Седоны</h2>
           <picture>
+            <source type="image/webp" media="(min-width: 768px)" width="800" height="256" srcset="img/map.webp 1x, img/map@2x.webp 2x">
+            <source type="image/webp" srcset="img/map-mobile.webp 1x, img/map-mobile@2x.webp 2x">
+
             <source media="(min-width: 768px)" width="1200" height="350" srcset="img/map.jpg 1x, img/map@2x.jpg 2x">
             <img class="map__image" src="img/map-mobile.jpg" alt="Америка, штат Аризона, Седона." width="768" height="350" srcset="img/map-mobile@2x.jpg 2x">
           </picture>
@@ -130,7 +142,7 @@
         <ul class="footer__social social-list">
           <li class="social-list__item">
             <a class="social-list__link" href="https://vk.com/htmlacademy">
-              <svg class="social-list__icon" width="24" height="24">
+              <svg class="social-list__icon" width="24" height="24" aria-hidden="true" focusable="false">
                 <use href="img/icons/index-sprite-icons.svg#social-vk-icon"></use>
               </svg>
               <span class="visually-hidden">вконтакте.</span>
@@ -138,7 +150,7 @@
           </li>
           <li class="social-list__item">
             <a class="social-list__link" href="https://t.me/htmlacademy">
-              <svg class="social-list__icon" width="24" height="24">
+              <svg class="social-list__icon" width="24" height="24" aria-hidden="true" focusable="false">
                 <use href="img/icons/index-sprite-icons.svg#social-telegram-icon"></use>
               </svg>
               <span class="visually-hidden">телеграм.</span>
@@ -146,7 +158,7 @@
           </li>
           <li class="social-list__item">
             <a class="social-list__link" href="https://www.youtube.com/user/htmlacademyru">
-              <svg class="social-list__icon" width="24" height="24">
+              <svg class="social-list__icon" width="24" height="24" aria-hidden="true" focusable="false">
                 <use href="img/icons/index-sprite-icons.svg#social-youtube-icon"></use>
               </svg>
               <span class="visually-hidden">ютуб.</span>
@@ -155,7 +167,7 @@
         </ul>
         <a class="footer__copyright copyright" href="https://htmlacademy.ru/">Разработано
           <span class="visually-hidden">Html Academy</span>
-          <svg class="copyright__icon" width="27" height="35">
+          <svg class="copyright__icon" width="27" height="35" aria-hidden="true" focusable="false">
             <use href="img/icons/index-sprite-icons.svg#htmlacademy-logo"></use>
           </svg>
         </a>
