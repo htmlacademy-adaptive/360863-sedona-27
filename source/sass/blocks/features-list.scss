@@ -20,6 +20,49 @@
   }
 }
 
+.features-list__item--motel {
+  background-image: url("../img/icons/house-icon.svg");
+  background-repeat: no-repeat;
+
+  @media (min-width: variables.$tablet-width) {
+    background-size: 78px 78px;
+    background-position: 88px 56px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    background-position: 160px 66px;
+  }
+}
+
+.features-list__item--food {
+  background-image: url("../img/icons/food-icon.svg");
+  background-repeat: no-repeat;
+
+  @media (min-width: variables.$tablet-width) {
+    background-size: 78px 78px;
+    background-position: 88px 56px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    background-position: 160px 66px;
+  }
+}
+
+.features-list__item--souvenirs {
+  background-image: url("../img/icons/souvenirs-icon.svg");
+  background-repeat: no-repeat;
+
+  @media (min-width: variables.$tablet-width) {
+    background-size: 82px 80px;
+    background-position: 90px 61px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    background-size: 96px 80px;
+    background-position: 107px 65px;
+  }
+}
+
 @media (min-width: variables.$tablet-width) {
   .features-list__item--motel {
     padding: 158px 33px 60px 33px;

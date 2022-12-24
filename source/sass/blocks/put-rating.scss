@@ -6,10 +6,28 @@
 }
 
 .put-rating__button {
+  position: relative;
   width: 23px;
   height: 21px;
   background-color: inherit;
   border: none;
+}
+
+.put-rating__icon {
+  position: absolute;
+  top: -4px;
+  left: 0;
+  opacity: 0.3;
+  fill: variables.$color-black;
+
+  @media (min-width: variables.$tablet-width) {
+    left: 5px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    opacity: 1;
+    fill: variables.$color-white;
+  }
 }
 
 .put-rating__counter {
@@ -27,8 +45,16 @@
   color: variables.$color-half-baked;
 }
 
+.put-rating__button:hover .put-rating__icon {
+  fill: variables.$color-half-baked;
+}
+
 .put-rating__button:active + .put-rating__counter {
   color: variables.$color-nobel;
+}
+
+.put-rating__button:active .put-rating__icon {
+  fill: variables.$color-nobel;
 }
 
 .put-rating__button:focus-visible {
@@ -37,4 +63,8 @@
 
 .put-rating__button:focus-visible + .put-rating__counter {
   color: variables.$color-half-baked;
+}
+
+.put-rating__button:focus-visible .put-rating__icon {
+  fill: variables.$color-half-baked;
 }

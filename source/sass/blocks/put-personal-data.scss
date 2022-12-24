@@ -42,3 +42,13 @@
 .put-personal-data__input--phone {
   padding-right: 58px;
 }
+
+.put-personal-data__input-wrapper {
+  position: relative;
+}
+
+.put-personal-data__icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+}

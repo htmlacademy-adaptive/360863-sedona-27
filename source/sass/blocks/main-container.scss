@@ -5,14 +5,26 @@
   padding-top: 32px;
 
   @media (min-width: variables.$tablet-width) {
+    padding-top: 0;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding-top: 61px;
+  }
+}
+
+.main-container__first-title {
+  @include mixins.mobile-view-centered();
+}
+
+.main-container--catalog {
+  padding-top: 38px;
+
+  @media (min-width: variables.$tablet-width) {
     padding-top: 66px;
   }
 
   @media (min-width: variables.$desktop-width) {
     padding-top: 98px;
   }
-}
-
-.main-container__first-title {
-  @include mixins.mobile-view-centered();
 }

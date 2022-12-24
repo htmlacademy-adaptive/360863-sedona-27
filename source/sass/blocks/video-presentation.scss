@@ -51,10 +51,12 @@
   background-image: url("../img/video-mobile.jpg");
   background-repeat: no-repeat;
   background-position: center;
+  background-image: -webkit-image-set(url("../img/video-mobile.webp") 1x); /*stylelint-disable-line   declaration-block-no-duplicate-properties, value-no-vendor-prefix*/
 
   @media (resolution: 2dppx) {
     background-image: url("../img/video-mobile@2x.jpg");
     background-size: 280px 177px;
+    background-image: -webkit-image-set(url("../img/video-mobile@2x.webp") 2x); /*stylelint-disable-line   declaration-block-no-duplicate-properties, value-no-vendor-prefix*/
   }
 
   @media (min-width: variables.$tablet-width) {
@@ -64,10 +66,12 @@
     margin-right: auto;
     margin-top: 90px;
     background-image: url("../img/video-tablet.jpg");
+    background-image: -webkit-image-set(url("../img/video-tablet.webp") 1x); /*stylelint-disable-line   declaration-block-no-duplicate-properties, value-no-vendor-prefix*/
 
     @media (resolution: 2dppx) {
       background-image: url("../img/video-tablet@2x.jpg");
       background-size: 648px 500px;
+      background-image: -webkit-image-set(url("../img/video-tablet@2x.webp") 2x); /*stylelint-disable-line   declaration-block-no-duplicate-properties, value-no-vendor-prefix*/
     }
   }
 
@@ -75,10 +79,12 @@
     height: 500px;
     width: 800px;
     background-image: url("../img/video-desktop.jpg");
+    background-image: -webkit-image-set(url("../img/video-desktop.webp") 1x); /*stylelint-disable-line   declaration-block-no-duplicate-properties, value-no-vendor-prefix*/
 
     @media (resolution: 2dppx) {
       background-image: url("../img/video-desktop@2x.jpg");
       background-size: 800px 500px;
+      background-image: -webkit-image-set(url("../img/video-desktop@2x.webp") 2x); /*stylelint-disable-line   declaration-block-no-duplicate-properties, value-no-vendor-prefix*/
     }
   }
 }

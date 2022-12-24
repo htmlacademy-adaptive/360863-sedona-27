@@ -8,29 +8,35 @@
   background-image: url("../img/intro.jpg");
   background-position: center bottom;
   background-repeat: no-repeat;
+  background-image: -webkit-image-set(url("../img/intro.webp") 1x); /*stylelint-disable-line   declaration-block-no-duplicate-properties, value-no-vendor-prefix*/
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/intro@2x.jpg");
     background-size: 902px auto;
+    background-image: -webkit-image-set(url("../img/intro@2x.webp") 2x); /*stylelint-disable-line   declaration-block-no-duplicate-properties, value-no-vendor-prefix*/
   }
 
   @media (min-width: variables.$tablet-width) {
     background-image: url("../img/intro-1200.jpg");
     min-height: 346px;
+    background-image: -webkit-image-set(url("../img/intro-1200.webp") 1x); /*stylelint-disable-line   declaration-block-no-duplicate-properties, value-no-vendor-prefix*/
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/intro-1200@2x.jpg");
       background-size: 1200px auto;
+      background-image: -webkit-image-set(url("../img/intro-1200@2x.webp") 2x); /*stylelint-disable-line   declaration-block-no-duplicate-properties, value-no-vendor-prefix*/
     }
   }
 
   @media (min-width: variables.$desktop-width) {
     background-image: url("../img/intro-1200-desktop.jpg");
     min-height: 357px;
+    background-image: -webkit-image-set(url("../img/intro-1200-desktop.webp") 1x); /*stylelint-disable-line   declaration-block-no-duplicate-properties, value-no-vendor-prefix*/
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/intro-1200-desktop@2x.jpg");
       background-size: 1200px auto;
+      background-image: -webkit-image-set(url("../img/intro-1200-desktop@2x.webp") 2x); /*stylelint-disable-line   declaration-block-no-duplicate-properties, value-no-vendor-prefix*/
     }
   }
 }
@@ -38,19 +44,23 @@
 .main-header--welcome {
   min-height: 445px;
   background-image: url("../img/intro-welcome.jpg");
+  background-image: -webkit-image-set(url("../img/intro-welcome.webp") 1x); /*stylelint-disable-line   declaration-block-no-duplicate-properties, value-no-vendor-prefix*/
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/intro-welcome@2x.jpg");
     background-size: 901px auto;
+    background-image: -webkit-image-set(url("../img/intro-welcome@2x.webp") 2x); /*stylelint-disable-line   declaration-block-no-duplicate-properties, value-no-vendor-prefix*/
   }
 
   @media (min-width: variables.$tablet-width) {
     background-image: url("../img/intro-welcome-1200.jpg");
     min-height: 574px;
+    background-image: -webkit-image-set(url("../img/intro-welcome-1200.webp") 1x); /*stylelint-disable-line   declaration-block-no-duplicate-properties, value-no-vendor-prefix*/
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/intro-welcome-1200@2x.jpg");
       background-size: 1200px auto;
+      background-image: -webkit-image-set(url("../img/intro-welcome-1200@2x.webp") 2x); /*stylelint-disable-line   declaration-block-no-duplicate-properties, value-no-vendor-prefix*/
     }
   }
 }
