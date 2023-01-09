@@ -13,7 +13,6 @@ import svgo from 'gulp-svgmin';
 import svgstore from 'gulp-svgstore';
 import {deleteAsync} from 'del';
 
-// Styles
 export const styles = () => {
   return gulp.src('source/sass/style.scss', { sourcemaps: true })
     .pipe(plumber())
@@ -27,14 +26,12 @@ export const styles = () => {
     .pipe(browser.stream());
 }
 
-// HTML
 const html = () => {
   return gulp.src('source/*.html')
     .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest('build'));
 }
 
-// Scripts
 const scripts = () => {
   return gulp.src('source/js/main.js')
     .pipe(terser())
@@ -42,7 +39,6 @@ const scripts = () => {
     .pipe(gulp.dest('build/js'))
 }
 
-// Images
 const optimizeImages = () => {
   return gulp.src('source/img/**/*.{jpg,png}')
     .pipe(squoosh())
@@ -54,7 +50,6 @@ const copyImages = () => {
     .pipe(gulp.dest('build/img'))
 }
 
-// Webp
 const createWebp = () => {
   return gulp.src('source/img/**/*.{jpg,png}')
     .pipe(squoosh({
@@ -63,7 +58,6 @@ const createWebp = () => {
     .pipe(gulp.dest('build/img'))
 }
 
-// SVG
 const svg = () => {
   return gulp.src(['source/img/**/*.svg', '!source/img/icons/sprite/*.svg'])
     .pipe(svgo())
@@ -80,7 +74,6 @@ const sprite = () => {
     .pipe(gulp.dest('build/img/icons/sprite'))
 }
 
-// Copy
 const copy = () => {
   return gulp.src([
     'source/fonts/*.{woff,woff2}',
@@ -92,12 +85,9 @@ const copy = () => {
     .pipe(gulp.dest('build'))
 }
 
-// Clean
 const clean = () => {
   return deleteAsync('build');
 };
-
-// Server
 
 const server = (done) => {
   browser.init({
@@ -111,20 +101,17 @@ const server = (done) => {
   done();
 }
 
-// Reload
 const reload = (done) => {
   browser.reload();
   done();
 }
 
-// Watcher
 const watcher = () => {
   gulp.watch('source/sass/**/*.scss', gulp.series(styles));
   gulp.watch('source/js/*.js', gulp.series(scripts));
   gulp.watch('source/*.html', gulp.series(html, reload));
 }
 
-//Build
 export const build = gulp.series(
   clean,
   copy,
@@ -138,8 +125,6 @@ export const build = gulp.series(
     createWebp
   ),
 );
-
-// Default
 
 export default gulp.series(
   clean,
